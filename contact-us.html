@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO META TAGS -->
+  <title>Contact Us - All Yono Official</title>
+  <link rel="canonical" href="https://allyonoofficial.com/contact-us.html" />
+  <meta name="description" content="Contact Us - All Yono Official. Reach out for business queries and advertising through our official channels." />
+  <meta name="keywords" content="Contact All Yono Official, Yono app support, Business inquiry, Yono Rummy collaboration" />
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/fevicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fevicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fevicon/favicon-16x16.png">
+  <link rel="manifest" href="/fevicon/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preload" href="/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+  <style>
+    /* ── Reset & Base (FULL WIDTH) ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; list-style: none; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      overflow-x: hidden;
+      width: 100%;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; -webkit-tap-highlight-color: transparent; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── Header ── */
+    .header {
+      background: #1a1a2e;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    .header-left { display: flex; align-items: center; gap: 10px; }
+    .logo-top { width: 36px; height: 36px; border-radius: 8px; }
+    .header-text { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: .3px; }
+    .header-right { display: flex; align-items: center; gap: 10px; }
+    .tg-header-btn {
+      background: #0088cc;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* ── Navbar (CENTERED FIX) ── */
+    .navbar {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #e5e7eb;
+      padding: 5px 0;
+    }
+    .navbar a {
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #4b5563;
+      transition: all .2s;
+    }
+    .navbar a:hover, .navbar a.active { color: #1a1a2e; border-bottom: 2px solid #1a1a2e; margin-bottom: -2px; }
+
+    /* ── Content Card ── */
+    .main-wrapper { width: 100%; padding: 20px 16px; }
+    .content-card { background: #fff; padding: 25px; border-radius: 15px; border: 1px solid #e5e7eb; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    
+    h1 { font-size: 24px; color: #1a1a2e; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 15px; }
+    h2 { font-size: 20px; color: #b91c1c; margin: 30px 0 15px; border-left: 6px solid #00f; padding-left: 12px; }
+    h3 { font-size: 18px; color: #0f3460; margin: 25px 0 10px; background: #f8fafc; padding: 10px; border-radius: 8px; font-weight: 700; }
+    p { margin-bottom: 15px; font-size: 15px; color: #334155; }
+
+    /* ── Contact Table ── */
+    .contact-table { width: 100%; max-width: 500px; margin: 20px auto; border-collapse: collapse; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .contact-table th { background: #1a1a2e; color: #fff; padding: 12px; font-size: 16px; }
+    .contact-table td { padding: 12px; border: 1px solid #eee; text-align: center; font-size: 15px; font-weight: 600; }
+    .contact-table a { color: #059669; text-decoration: underline; }
+
+    /* ── Telegram Card ── */
+    .group-card {
+      background: #f0f8ff;
+      border: 1px solid #d1e9ff;
+      padding: 15px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .join-btn { background: #004f7a; color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 700; font-size: 14px; }
+
+    /* ── FIXED TAGS TICKER ── */
+    .ticker-wrap {
+      background: #1a1a2e;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      height: 40px;
+      overflow: hidden;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+    .ticker-title {
+      background: #0f3460;
+      color: #facc15;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 0 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .ticker-marquee { flex: 1; color: #d1d5db; font-size: 12px; display: flex; align-items: center; }
+
+    /* ── DRAGGABLE FLOATING BUTTONS ── */
+    #draggable-container {
+      position: fixed;
+      bottom: 80px;
+      right: 15px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      cursor: grab;
+      touch-action: none;
+      user-select: none;
+    }
+    #draggable-container:active { cursor: grabbing; }
+    .social-btn {
+      display: block;
+      width: 115px;
+      filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.3));
+      transition: transform 0.2s;
+    }
+    .social-btn img { width: 100%; pointer-events: none; }
+
+    /* ── Footer ── */
+    .main-background { background: #1a1a2e; color: #fff; padding: 40px 16px; text-align: center; }
+    .footer-link { color: #9ca3af; font-size: 12px; margin: 0 10px; text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .header-text { font-size: 16px; }
+      .tg-header-btn { display: none; }
+      .navbar a { padding: 10px 8px; font-size: 11px; }
+      .social-btn { width: 95px; }
+      .content-card { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-left">
+    <a href="/"><img class="logo-top" src="./img/img_20240727_173841_366.png" alt="Logo"></a>
+    <a href="/"><span class="header-text">All Yono Official</span></a>
+  </div>
+  <div class="header-right">
+    <a href="telegram-link.html" target="_blank"><button class="tg-header-btn">Telegram</button></a>
+  </div>
+</header>
+
+<!-- Nav -->
+<nav class="navbar">
+  <a href="/">Home</a>
+  <a href="about-us.html">About</a>
+  <a href="contact-us.html" class="active">Contact Us</a>
+  <a href="blogs.html">Blogs</a>
+  <a href="telegram-link.html" target="_blank">Telegram</a>
+</nav>
+
+<!-- Main Contact Content -->
+<div class="main-wrapper">
+  <div class="content-card">
+    
+    <h1>Contact Us</h1>
+
+    <p><strong>All Yono Official</strong> does not provide Customer Support for <strong>Listed Apps/Games</strong>. If you encounter any problems with a specific game (withdrawal issues, deposit errors, etc.), please contact the support option <strong>within that specific game</strong>. We do not own or manage those applications; we are a digital distribution platform only.</p>
+
+    <h3>Advertisement / Business Queries</h3>
+    <p>If you are a game maker company, operator, or administrator and you want to promote your application through our website, you can contact us through the details below to discuss promotion and cooperation.</p>
+
+    <table class="contact-table">
+       <thead>
+          <tr>
+             <th colspan="2">Business Contact Details</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr>
+             <td>Email :</td>
+             <td><a href="mailto:support@AllYonoOfficial.com">coming soon</a></td>
+          </tr>
+          <tr>
+             <td>Telegram :</td>
+             <td><a href="telegram-link.html">Join Official Channel</a></td>
+          </tr>
+       </tbody>
+    </table>
+
+    <p style="text-align: center; margin-top: 15px;">You can directly contact us through <strong>Email</strong> or <strong>Telegram</strong> for official deals and partnerships.</p>
+
+    <!-- Telegram Card -->
+    <div class="group-card">
+       <span style="font-weight:700; color:#004f7a;"><i class="fab fa-telegram" style="font-size:20px;"></i> Join Telegram Channel</span>
+       <a href="telegram-link.html" class="join-btn" target="_blank">Join Now</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FIXED TAGS BLOCK -->
+<div class="ticker-wrap">
+  <div class="ticker-title">Tags:</div>
+  <div class="ticker-marquee">
+    <marquee scrollamount="5">All Yono Official contact, business inquiry, yono rummy support, promote app, AllYonoOfficial.com contact, telegram help, gaming collaboration.</marquee>
+  </div>
+</div>
+
+<!-- DRAGGABLE FLOATING BUTTONS -->
+<div id="draggable-container">
+  <a href="telegram-link.html" class="social-btn" target="_blank"><img src="./img/telegram_join_button.webp" alt="Telegram"></a>
+  <a href="whatsapp-join.html" class="social-btn" target="_blank"><img src="./img/whatsapp_channnel.webp" alt="WhatsApp"></a>
+</div>
+
+<!-- Footer -->
+<footer class="main-background">
+  <div style="margin-bottom:20px;"><a href="about-us.html" class="footer-link">About Us</a><a href="disclaimer.html" class="footer-link">Disclaimer</a><a href="contact-us.html" class="footer-link">Contact Us</a><a href="terms-and-conditions.html" class="footer-link"> Terms and Condition</a> <a href="privacy-policy.html" class="footer-link">Privacy Policy</a></div>
+  <p style="color: #6b7280; font-size: 11px; text-align: center;">Copyright © 2026 AllYonoOfficial.com All Rights Reserved</p>
+</footer>
+
+<script>
+  /* ── DRAGGABLE LOGIC ── */
+  const dragElem = document.getElementById('draggable-container');
+  let isDragging = false, startX, startY, initialX, initialY;
+
+  const onDragStart = (e) => {
+    isDragging = false;
+    const pos = e.type === 'touchstart' ? e.touches[0] : e;
+    startX = pos.clientX; startY = pos.clientY;
+    const rect = dragElem.getBoundingClientRect();
+    initialX = rect.left; initialY = rect.top;
+
+    const onDragging = (moveEvent) => {
+      isDragging = true;
+      const movePos = moveEvent.type === 'touchmove' ? moveEvent.touches[0] : moveEvent;
+      let nx = initialX + (movePos.clientX - startX);
+      let ny = initialY + (movePos.clientY - startY);
+      
+      nx = Math.max(0, Math.min(nx, window.innerWidth - dragElem.offsetWidth));
+      ny = Math.max(0, Math.min(ny, window.innerHeight - dragElem.offsetHeight));
+
+      dragElem.style.left = nx + 'px';
+      dragElem.style.top = ny + 'px';
+      dragElem.style.right = 'auto';
+      dragElem.style.bottom = 'auto';
+    };
+
+    const onDragEnd = () => {
+      document.removeEventListener('mousemove', onDragging);
+      document.removeEventListener('mouseup', onDragEnd);
+      document.removeEventListener('touchmove', onDragging);
+      document.removeEventListener('touchend', onDragEnd);
+    };
+
+    document.addEventListener('mousemove', onDragging);
+    document.addEventListener('mouseup', onDragEnd);
+    document.addEventListener('touchmove', onDragging, { passive: false });
+    document.addEventListener('touchend', onDragEnd);
+  };
+
+  dragElem.addEventListener('mousedown', onDragStart);
+  dragElem.addEventListener('touchstart', onDragStart, { passive: true });
+
+  dragElem.querySelectorAll('a').forEach(l => {
+    l.addEventListener('click', (e) => { if (isDragging) e.preventDefault(); });
+  });
+</script>
+
+</body>
+</html>
