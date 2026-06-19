@@ -222,7 +222,6 @@
     .promo-code-wrap { display: flex; gap: 8px; align-items: center; }
     .promo-code { flex: 1; background: #f1f5f9; padding: 7px 9px; border-radius: 6px; font-size: 11.5px; font-family: monospace; overflow-x: auto; white-space: nowrap; }
     .promo-copy { background: #1a1a2e; color: #fff; border: none; border-radius: 6px; padding: 7px 12px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; }
-    .promo-timer { font-size: 11px; color: #dc2626; margin-top: 8px; font-weight: 700; }
     .promo-empty { text-align: center; font-size: 12px; color: #9ca3af; padding: 20px 0; }
     #toast-notification { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: #1a1a2e; color: #fff; padding: 10px 18px; border-radius: 20px; font-size: 12px; opacity: 0; pointer-events: none; transition: .25s; z-index: 10001; }
     #toast-notification.show { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -688,7 +687,6 @@
             <code class="promo-code">${item.code}</code>
             <button class="promo-copy" type="button" data-code="${item.code}">Copy</button>
           </div>
-          <div class="promo-timer"></div>
         </article>`;
       }).join('');
     }
@@ -701,35 +699,6 @@
       if (h < 18) return 'afternoon';
       return 'evening';
     }
-
-    function periodEnd(period) {
-      const end = new Date();
-      if (period === 'morning') end.setHours(12, 0, 0, 0);
-      else if (period === 'afternoon') end.setHours(18, 0, 0, 0);
-      else { end.setHours(0, 0, 0, 0); end.setDate(end.getDate() + 1); }
-      return end;
-    }
-
-    function formatCountdown(ms) {
-      if (ms < 0) ms = 0;
-      const totalSec = Math.floor(ms / 1000);
-      const h = Math.floor(totalSec / 3600);
-      const m = Math.floor((totalSec % 3600) / 60);
-      const s = totalSec % 60;
-      return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-    }
-
-    function updateTimers() {
-      document.querySelectorAll('.yono-promo-card').forEach(card => {
-        const period = card.dataset.period;
-        const el = card.querySelector('.promo-timer');
-        if (!el) return;
-        const diff = periodEnd(period) - new Date();
-        el.textContent = diff > 0 ? 'Expires in ' + formatCountdown(diff) : 'Expired';
-      });
-    }
-    updateTimers();
-    setInterval(updateTimers, 1000);
 
     const trigger = document.getElementById('promoTrigger');
     const popup = document.getElementById('promoPopup');
