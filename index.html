@@ -667,7 +667,7 @@
   dragElem.addEventListener('touchstart', onDragStart, { passive: true });
 </script>
 
-<script src="promo-codes.js"></script>
+<script>document.write('<script src="promo-codes.js?v=' + Date.now() + '"></scr' + 'ipt>');</script>
 <script>
   (function () {
     function renderPromoTab(period) {
