@@ -47,6 +47,8 @@
   }
   </script>
 
+  <link rel="preload" href="img/hero-bg.webp" as="image" fetchpriority="high">
+
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
@@ -79,7 +81,7 @@
     .navbar a:hover, .navbar a.active { color: #1a1a2e; border-bottom: 2px solid #1a1a2e; margin-bottom: -2px; }
 
     /* Hero */
-    .hero { background: linear-gradient(rgba(10,14,28,.6), rgba(10,14,28,.8)), url('home%5Bbg%5D.png') center center / cover no-repeat; color: #fff; text-align: center; padding: 36px 16px 26px; }
+    .hero { background: linear-gradient(rgba(10,14,28,.6), rgba(10,14,28,.8)), url('img/hero-bg.webp') center center / cover no-repeat; color: #fff; text-align: center; padding: 36px 16px 26px; }
     .hero h1 { font-size: 22px; font-weight: 800; margin-bottom: 10px; line-height: 1.35; }
     .hero p { font-size: 13px; color: #cbd5e1; max-width: 520px; margin: 0 auto 18px; }
     .hero-ctas { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
@@ -243,7 +245,7 @@
 
 <header class="header">
   <div class="header-left">
-    <a href="/"><img class="logo-top" src="img/img_20240727_173841_366.png" alt="All Yono Official logo"></a>
+    <a href="/"><img class="logo-top" src="img/img_20240727_173841_366.png" alt="All Yono Official logo" width="36" height="36" decoding="async"></a>
     <a href="/"><span class="header-text">All Yono Official</span></a>
   </div>
   <div class="header-right">
@@ -416,7 +418,7 @@
 
     container.innerHTML = filteredGames.map(g => `
       <li class="app-item_dont_copy">
-        <img src="app_icon/${g.i}" alt="${g.n} app icon" class="app-icon-sm" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 24 24\' fill=\'%23333\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23ddd\'/%3E%3Ctext x=\'30\' y=\'40\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23666\'%3E🎮%3C/text%3E%3C/svg%3E'">
+        <img src="app_icon/${g.i}" alt="${g.n} app icon" class="app-icon-sm" width="60" height="60" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 24 24\' fill=\'%23333\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23ddd\'/%3E%3Ctext x=\'30\' y=\'40\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23666\'%3E🎮%3C/text%3E%3C/svg%3E'">
         <div class="app-details">
           <h6>${g.n}</h6>
           <span class="bonus-txt"><i class="fa-solid fa-gift"></i> Sign Up Bonus ₹${g.b}</span>
@@ -594,8 +596,8 @@
 </footer>
 
 <div id="draggable-container">
-  <a href="/telegram-link.html" class="social-btn" target="_blank"><img src="img/telegram_join_button.webp" alt="Telegram Join Button"></a>
-  <a href="/whatsapp-join.html" class="social-btn" target="_blank"><img src="img/whatsapp_channnel.webp" alt="WhatsApp Channel"></a>
+  <a href="/telegram-link.html" class="social-btn" target="_blank"><img src="img/telegram_join_button.webp" alt="Telegram Join Button" width="205" height="110" loading="lazy" decoding="async"></a>
+  <a href="/whatsapp-join.html" class="social-btn" target="_blank"><img src="img/whatsapp_channnel.webp" alt="WhatsApp Channel" width="565" height="305" loading="lazy" decoding="async"></a>
 </div>
 
 <!-- Promo Codes floating widget -->
@@ -666,7 +668,13 @@
   dragElem.addEventListener('touchstart', onDragStart, { passive: true });
 </script>
 
-<script>document.write('<script src="promo-codes.js?v=' + Date.now() + '"></scr' + 'ipt>');</script>
+<script>
+  (function () {
+    var s = document.createElement('script');
+    s.src = 'promo-codes.js?v=' + Date.now();
+    document.currentScript.parentNode.insertBefore(s, document.currentScript.nextSibling);
+  })();
+</script>
 <script>
   (function () {
     function renderPromoTab(period) {
@@ -690,8 +698,6 @@
         </article>`;
       }).join('');
     }
-
-    ['morning', 'afternoon', 'evening'].forEach(renderPromoTab);
 
     function currentPeriod() {
       const h = new Date().getHours();
@@ -717,6 +723,7 @@
     }
 
     function openPopup() {
+      ['morning', 'afternoon', 'evening'].forEach(renderPromoTab);
       popup.hidden = false;
       document.body.style.overflow = 'hidden';
       trigger.setAttribute('aria-expanded', 'true');
