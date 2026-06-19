@@ -670,29 +670,23 @@
 <script src="promo-codes.js"></script>
 <script>
   (function () {
-    function slugCode(g, period) {
-      return g.l.toUpperCase().replace(/[^A-Z0-9]/g, '') + '.BONUS' + g.b + '-' + promoShiftTag[period];
-    }
-
-    const bestApps = games.filter(g => g.t === 'best');
-
     function renderPromoTab(period) {
       const container = document.getElementById('promo-' + period);
+      const list = (typeof promoCodes !== 'undefined' && promoCodes[period]) || [];
       if (!container) return;
-      if (!bestApps.length) {
+      if (!list.length) {
         container.innerHTML = '<div class="promo-empty">No promo codes available right now.</div>';
         return;
       }
       const label = period.charAt(0).toUpperCase() + period.slice(1);
-      container.innerHTML = bestApps.map(g => {
-        const code = slugCode(g, period);
+      container.innerHTML = list.map(item => {
         return `
         <article class="yono-promo-card" data-period="${period}">
           <span class="promo-badge">${label}</span>
-          <h3 class="promo-title">${g.n}</h3>
+          <h3 class="promo-title">${item.name}</h3>
           <div class="promo-code-wrap">
-            <code class="promo-code">${code}</code>
-            <button class="promo-copy" type="button" data-code="${code}">Copy</button>
+            <code class="promo-code">${item.code}</code>
+            <button class="promo-copy" type="button" data-code="${item.code}">Copy</button>
           </div>
           <div class="promo-timer"></div>
         </article>`;
