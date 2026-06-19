@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>All Yono Official: Download ₹51–₹500 Bonus Apps Now Free</title>
@@ -73,7 +73,7 @@
     .header-left { display: flex; align-items: center; gap: 10px; }
     .logo-top { width: 36px; height: 36px; border-radius: 8px; }
     .header-text { font-size: 17px; font-weight: 700; color: #ffffff; letter-spacing: .3px; }
-    .tg-header-btn { background: #0088cc; color: #fff; border: none; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .tg-header-btn { display: inline-block; background: #0088cc; color: #fff; border: none; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 600; cursor: pointer; }
 
     /* Navbar */
     .navbar { background: #ffffff; display: flex; justify-content: center; flex-wrap: wrap; border-bottom: 2px solid #e5e7eb; padding: 5px 0; }
@@ -104,10 +104,10 @@
     .app-item_dont_copy::before { counter-increment: app-rank; content: counter(app-rank) "."; font-weight: 800; color: #9ca3af; min-width: 25px; font-size: 14px; }
     .app-icon-sm { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; background: #f1f5f9; }
     .app-details { flex: 1; min-width: 0; }
-    .app-details h6 { font-size: 14px; font-weight: 700; color: #1a1a2e; }
-    .bonus-txt { color: red !important; font-size: 11px; font-weight: 700; display: block; }
+    .app-details .app-name { font-size: 14px; font-weight: 700; color: #1a1a2e; }
+    .bonus-txt { color: #b91c1c !important; font-size: 11px; font-weight: 700; display: block; }
     .withdraw-txt { color: green !important; font-size: 11px; font-weight: 700; display: block; }
-    .dl-mini { background: #1a1a2e; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 11px; font-weight: 700; border: none; cursor: pointer; }
+    .dl-mini { display: inline-block; background: #1a1a2e; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 11px; font-weight: 700; border: none; cursor: pointer; }
 
     /* Trust strip */
     .trust-strip { display: flex; justify-content: center; gap: 10px; padding: 22px 16px; background: #fff; flex-wrap: wrap; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
@@ -126,14 +126,14 @@
     .steps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .step-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; text-align: center; }
     .step-num { width: 32px; height: 32px; border-radius: 50%; background: #1a1a2e; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 8px; font-size: 13px; }
-    .step-card h4 { font-size: 13px; margin-bottom: 4px; }
+    .step-card h3 { font-size: 13px; margin-bottom: 4px; }
     .step-card p { font-size: 11px; color: #64748b; }
 
     /* Feature highlights */
     .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
     .feature-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px 14px; text-align: center; }
     .feature-card i { font-size: 22px; color: #0088cc; margin-bottom: 10px; display: block; }
-    .feature-card h4 { font-size: 13px; margin-bottom: 4px; }
+    .feature-card h3 { font-size: 13px; margin-bottom: 4px; }
     .feature-card p { font-size: 11px; color: #64748b; }
 
     /* CTA banner */
@@ -205,8 +205,8 @@
     }
 
     /* Promo codes floating widget */
-    .promo-trigger { position: fixed; bottom: 80px; left: 15px; z-index: 9999; background: linear-gradient(135deg, #f59e0b, #dc2626); color: #fff; border: none; border-radius: 24px; padding: 12px 16px; font-size: 12px; font-weight: 800; box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer; }
-    .promo-trigger::after { content: ''; position: absolute; inset: 0; border-radius: 24px; background: rgba(245,158,11,.6); z-index: -1; animation: promoPulse 2s ease-out infinite; will-change: transform, opacity; }
+    .promo-trigger { position: fixed; bottom: 80px; left: 15px; z-index: 9999; background: linear-gradient(135deg, #b45309, #b91c1c); color: #fff; border: none; border-radius: 24px; padding: 12px 16px; font-size: 12px; font-weight: 800; box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer; }
+    .promo-trigger::after { content: ''; position: absolute; inset: 0; border-radius: 24px; background: rgba(180,83,9,.6); z-index: -1; animation: promoPulse 2s ease-out infinite; will-change: transform, opacity; }
     @keyframes promoPulse { 0% { transform: scale(1); opacity: .6; } 70% { transform: scale(1.35); opacity: 0; } 100% { transform: scale(1.35); opacity: 0; } }
     .promo-popup { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 16px; }
     .promo-popup[hidden] { display: none; }
@@ -225,7 +225,7 @@
     .promo-code-wrap { display: flex; gap: 8px; align-items: center; }
     .promo-code { flex: 1; background: #f1f5f9; padding: 7px 9px; border-radius: 6px; font-size: 11.5px; font-family: monospace; overflow-x: auto; white-space: nowrap; }
     .promo-copy { background: #1a1a2e; color: #fff; border: none; border-radius: 6px; padding: 7px 12px; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0; }
-    .promo-empty { text-align: center; font-size: 12px; color: #9ca3af; padding: 20px 0; }
+    .promo-empty { text-align: center; font-size: 12px; color: #64748b; padding: 20px 0; }
     #toast-notification { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: #1a1a2e; color: #fff; padding: 10px 18px; border-radius: 20px; font-size: 12px; opacity: 0; pointer-events: none; transition: .25s; z-index: 10001; }
     #toast-notification.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
@@ -250,7 +250,7 @@
     <a href="/"><span class="header-text">All Yono Official</span></a>
   </div>
   <div class="header-right">
-    <a href="/telegram-link.html"><button class="tg-header-btn">Telegram</button></a>
+    <a href="/telegram-link.html" class="tg-header-btn">Telegram</a>
   </div>
 </header>
 
@@ -261,6 +261,8 @@
   <a href="/blogs.html">Blogs</a>
   <a href="/telegram-link.html" target="_blank">Telegram</a>
 </nav>
+
+<main>
 
 <section class="hero">
   <h1>All Yono Official – Download ₹51 to ₹500 Bonus Apps Free</h1>
@@ -421,11 +423,11 @@
       <li class="app-item_dont_copy">
         <img src="app_icon/${g.i}" alt="${g.n} app icon" class="app-icon-sm" width="60" height="60" loading="lazy" decoding="async" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 24 24\' fill=\'%23333\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23ddd\'/%3E%3Ctext x=\'30\' y=\'40\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23666\'%3E🎮%3C/text%3E%3C/svg%3E'">
         <div class="app-details">
-          <h6>${g.n}</h6>
+          <p class="app-name">${g.n}</p>
           <span class="bonus-txt"><i class="fa-solid fa-gift"></i> Sign Up Bonus ₹${g.b}</span>
           <span class="withdraw-txt"><i class="fa-solid fa-building-columns"></i> Min. Withdraw ₹100</span>
         </div>
-        <a href="/${g.l}/"><button class="dl-mini">Download</button></a>
+        <a href="/${g.l}/" class="dl-mini">Download</a>
       </li>
     `).join('');
   }
@@ -468,22 +470,22 @@
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-num">1</div>
-      <h4>Choose an App</h4>
+      <h3>Choose an App</h3>
       <p>Pick any app from our verified list above.</p>
     </div>
     <div class="step-card">
       <div class="step-num">2</div>
-      <h4>Download APK</h4>
+      <h3>Download APK</h3>
       <p>Tap Download to get the official APK link.</p>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
-      <h4>Sign Up &amp; Verify</h4>
+      <h3>Sign Up &amp; Verify</h3>
       <p>Register and verify your mobile number.</p>
     </div>
     <div class="step-card">
       <div class="step-num">4</div>
-      <h4>Claim Bonus &amp; Withdraw</h4>
+      <h3>Claim Bonus &amp; Withdraw</h3>
       <p>Claim your sign-up bonus and withdraw from ₹100.</p>
     </div>
   </div>
@@ -494,17 +496,17 @@
   <div class="feature-grid">
     <div class="feature-card">
       <i class="fa-solid fa-shield-halved"></i>
-      <h4>Verified Links</h4>
+      <h3>Verified Links</h3>
       <p>Every download button points to the app's official page.</p>
     </div>
     <div class="feature-card">
       <i class="fa-solid fa-clock-rotate-left"></i>
-      <h4>Daily Updated Bonuses</h4>
+      <h3>Daily Updated Bonuses</h3>
       <p>Bonus amounts are checked and refreshed regularly.</p>
     </div>
     <div class="feature-card">
       <i class="fa-solid fa-money-bill-transfer"></i>
-      <h4>Fast Withdrawal</h4>
+      <h3>Fast Withdrawal</h3>
       <p>Minimum withdrawal of just ₹100 on most apps.</p>
     </div>
   </div>
@@ -585,6 +587,8 @@
   <div class="ticker-marquee"><marquee scrollamount="5">All Yono Official, yono rummy, yono arcade, yono 777, yono vip list, download yono apps.</marquee></div>
 </div>
 
+</main>
+
 <footer class="main-background">
   <div style="margin-bottom:20px;">
     <a href="/about-us.html" class="footer-link">About Us</a>
@@ -593,7 +597,7 @@
     <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
     <a href="/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
   </div>
-  <p style="color: #6b7280; font-size: 11px; text-align: center;">Copyright © 2026 AllYonoOfficial.com All Rights Reserved</p>
+  <p style="color: #9ca3af; font-size: 11px; text-align: center;">Copyright © 2026 AllYonoOfficial.com All Rights Reserved</p>
 </footer>
 
 <div id="draggable-container">
