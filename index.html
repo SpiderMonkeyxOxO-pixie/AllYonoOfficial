@@ -667,32 +667,25 @@
   dragElem.addEventListener('touchstart', onDragStart, { passive: true });
 </script>
 
+<script src="promo-codes.js"></script>
 <script>
-  // ── Promo Codes widget: real apps/bonuses from the games array above, split across 3 daily periods ──
   (function () {
-    function slugCode(g) {
-      return g.l.toUpperCase().replace(/[^A-Z0-9]/g, '') + '.BONUS' + g.b;
+    function slugCode(g, period) {
+      return g.l.toUpperCase().replace(/[^A-Z0-9]/g, '') + '.BONUS' + g.b + '-' + promoShiftTag[period];
     }
 
     const bestApps = games.filter(g => g.t === 'best');
-    const third = Math.ceil(bestApps.length / 3);
-    const promoData = {
-      morning: bestApps.slice(0, third),
-      afternoon: bestApps.slice(third, third * 2),
-      evening: bestApps.slice(third * 2)
-    };
 
     function renderPromoTab(period) {
       const container = document.getElementById('promo-' + period);
-      const list = promoData[period];
       if (!container) return;
-      if (!list.length) {
+      if (!bestApps.length) {
         container.innerHTML = '<div class="promo-empty">No promo codes available right now.</div>';
         return;
       }
       const label = period.charAt(0).toUpperCase() + period.slice(1);
-      container.innerHTML = list.map(g => {
-        const code = slugCode(g);
+      container.innerHTML = bestApps.map(g => {
+        const code = slugCode(g, period);
         return `
         <article class="yono-promo-card" data-period="${period}">
           <span class="promo-badge">${label}</span>
