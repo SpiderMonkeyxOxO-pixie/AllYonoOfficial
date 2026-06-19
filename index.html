@@ -205,8 +205,9 @@
     }
 
     /* Promo codes floating widget */
-    .promo-trigger { position: fixed; bottom: 80px; left: 15px; z-index: 9999; background: linear-gradient(135deg, #f59e0b, #dc2626); color: #fff; border: none; border-radius: 24px; padding: 12px 16px; font-size: 12px; font-weight: 800; box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer; animation: promoPulse 2s ease-in-out infinite; }
-    @keyframes promoPulse { 0% { box-shadow: 0 0 0 0 rgba(245,158,11,.6); } 70% { box-shadow: 0 0 0 10px rgba(245,158,11,0); } 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); } }
+    .promo-trigger { position: fixed; bottom: 80px; left: 15px; z-index: 9999; background: linear-gradient(135deg, #f59e0b, #dc2626); color: #fff; border: none; border-radius: 24px; padding: 12px 16px; font-size: 12px; font-weight: 800; box-shadow: 0 4px 14px rgba(0,0,0,.3); cursor: pointer; }
+    .promo-trigger::after { content: ''; position: absolute; inset: 0; border-radius: 24px; background: rgba(245,158,11,.6); z-index: -1; animation: promoPulse 2s ease-out infinite; will-change: transform, opacity; }
+    @keyframes promoPulse { 0% { transform: scale(1); opacity: .6; } 70% { transform: scale(1.35); opacity: 0; } 100% { transform: scale(1.35); opacity: 0; } }
     .promo-popup { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 16px; }
     .promo-popup[hidden] { display: none; }
     .promo-content { background: #fff; border-radius: 14px; max-width: 380px; width: 100%; max-height: 82vh; overflow-y: auto; padding: 20px 18px; position: relative; }
@@ -245,7 +246,7 @@
 
 <header class="header">
   <div class="header-left">
-    <a href="/"><img class="logo-top" src="img/img_20240727_173841_366.png" alt="All Yono Official logo" width="36" height="36" decoding="async"></a>
+    <a href="/"><img class="logo-top" src="img/logo-icon.webp" alt="All Yono Official logo" width="36" height="36" decoding="async"></a>
     <a href="/"><span class="header-text">All Yono Official</span></a>
   </div>
   <div class="header-right">
