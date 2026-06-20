@@ -1184,23 +1184,6 @@
             "position": 69,
             "item": {
                 "@type": "SoftwareApplication",
-                "name": "Spin 777",
-                "image": "https://allyonostore.com/app_icon/icon_1765699651_764.webp",
-                "url": "https://allyonostore.com/spin-777/",
-                "operatingSystem": "ANDROID",
-                "applicationCategory": "GameApplication",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "INR"
-                }
-            }
-        },
-        {
-            "@type": "ListItem",
-            "position": 70,
-            "item": {
-                "@type": "SoftwareApplication",
                 "name": "EN 365",
                 "image": "https://allyonostore.com/app_icon/icon_1765724386_722.webp",
                 "url": "https://allyonostore.com/en-365/",
@@ -1215,7 +1198,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 71,
+            "position": 70,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Spin Crush",
@@ -1232,7 +1215,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 72,
+            "position": 71,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Sikkim Game",
@@ -1249,7 +1232,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 73,
+            "position": 72,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "567 Slots Yono",
@@ -1266,7 +1249,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 74,
+            "position": 73,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Yono 777",
@@ -1283,7 +1266,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 75,
+            "position": 74,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "MDM Bet",
@@ -1300,7 +1283,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 76,
+            "position": 75,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "IND SLOTS",
@@ -1317,7 +1300,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 77,
+            "position": 76,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "101 Z",
@@ -1334,7 +1317,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 78,
+            "position": 77,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Rummy 365",
@@ -1351,7 +1334,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 79,
+            "position": 78,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "GoGo Rummy",
@@ -1368,7 +1351,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 80,
+            "position": 79,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Yono Rummy",
@@ -1385,7 +1368,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 81,
+            "position": 80,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Rummy 420",
@@ -1402,7 +1385,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 82,
+            "position": 81,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Spin Lucky",
@@ -1419,7 +1402,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 83,
+            "position": 82,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "789 JACKPOTS",
@@ -1436,7 +1419,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 84,
+            "position": 83,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "MBM Bet",
@@ -1453,7 +1436,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 85,
+            "position": 84,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "MKM Bet",
@@ -1470,7 +1453,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 86,
+            "position": 85,
             "item": {
                 "@type": "SoftwareApplication",
                 "name": "Colour Trading",
