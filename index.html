@@ -49,8 +49,8 @@
 
   <link rel="preload" href="img/hero-bg.webp" as="image" fetchpriority="high">
 
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+  <link rel="preload" href="/fonts/fa-subset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/fonts/fa-subset.css"></noscript>
 
       <!-- Google tag (gtag.js) - script load deferred until after window 'load' so its 159KB
            doesn't compete with the hero LCP image for bandwidth on slow connections -->
@@ -495,7 +495,8 @@
       return;
     }
 
-    container.innerHTML = filteredGames.map(g => `
+    container.innerHTML = '';
+    const itemHtml = (g) => `
       <li class="app-item_dont_copy">
         <img src="app_icon/${g.i}" alt="${g.n} app icon" class="app-icon-sm" width="60" height="60" loading="lazy" decoding="async" fetchpriority="low" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 24 24\' fill=\'%23333\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23ddd\'/%3E%3Ctext x=\'30\' y=\'40\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23666\'%3E🎮%3C/text%3E%3C/svg%3E'">
         <div class="app-details">
@@ -505,7 +506,18 @@
         </div>
         <a href="/${g.l}/" class="dl-mini">Download</a>
       </li>
-    `).join('');
+    `;
+    // Render in small batches across animation frames so building a long
+    // list (e.g. all 57 apps) never blocks the main thread in one long task.
+    const BATCH_SIZE = 8;
+    let i = 0;
+    function renderBatch() {
+      const slice = filteredGames.slice(i, i + BATCH_SIZE);
+      container.insertAdjacentHTML('beforeend', slice.map(itemHtml).join(''));
+      i += BATCH_SIZE;
+      if (i < filteredGames.length) requestAnimationFrame(renderBatch);
+    }
+    renderBatch();
   }
 
   // Defer the initial 57-icon render until the app list is about to enter
