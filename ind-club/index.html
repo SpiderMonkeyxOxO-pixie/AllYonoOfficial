@@ -122,8 +122,7 @@
     /* ── Payment + Share (added) ── */
     .payment-strip { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin: 10px 16px; text-align: center; }
     .payment-label { font-size: 13px; color: #475569; margin-bottom: 8px; }
-    .payment-icons { display: flex; justify-content: center; align-items: center; gap: 14px; font-weight: 800; font-size: 15px; color: #1a1a2e; margin-bottom: 12px; }
-    .payment-icons i { color: #16a34a; margin-right: 4px; }
+    .payment-icons { display: block; max-width: 220px; width: 100%; height: auto; margin: 0 auto 12px; }
     .share-btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #1a1a2e; color: #1a1a2e; background: #fff; font-weight: 700; font-size: 13px; padding: 8px 18px; border-radius: 20px; cursor: pointer; }
 
     /* ── Suggested Apps (added) ── */
@@ -168,6 +167,7 @@
   <a href="/blog/">Blogs</a>
     <a href="/app-checker/">App Checker</a>
   <a href="/most-rated-apps/">Most Rated Apps</a>
+  <a href="/videos/">Videos</a>
   <a href="/telegram-link.html" target="_blank">Telegram</a>
 </nav>
 
@@ -195,7 +195,7 @@
 
 <div class="payment-strip">
   <p class="payment-label">Withdraw winnings directly to your</p>
-  <div class="payment-icons"><i class="fa-solid fa-mobile-screen-button"></i> UPI <i class="fa-solid fa-money-bill-transfer"></i> IMPS</div>
+  <img class="payment-icons" src="../img/upi-imps.webp" alt="UPI and IMPS withdrawal logos" width="220" height="50" loading="lazy" decoding="async">
   <button class="share-btn-outline" onclick="if(navigator.share){navigator.share({title:document.title, url:window.location.href})}"><i class="fa-solid fa-share-nodes"></i> Share IND Club Apk</button>
 </div>
 
