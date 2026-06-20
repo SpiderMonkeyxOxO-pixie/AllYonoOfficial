@@ -80,15 +80,13 @@
     .home-link-line { font-size: 13px; color: #64748b; text-align: center; margin-bottom: 6px; }
     .home-link-line a { color: #0088cc; font-weight: 700; }
 
-    .blog-group { margin-top: 30px; }
-    .group-title { font-size: 16px; font-weight: 800; color: #1a1a2e; margin: 0 0 14px; padding-left: 10px; border-left: 5px solid #0088cc; }
-
-    .blog-card-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .blog-card-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 26px; }
     .blog-card { display: flex; flex-direction: column; background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,.05); transition: box-shadow .2s ease, transform .2s ease; }
     .blog-card:hover, .blog-card:focus-visible { box-shadow: 0 8px 20px rgba(0,0,0,.10); transform: translateY(-2px); }
     .blog-card-img { width: 100%; aspect-ratio: 1200 / 675; object-fit: cover; background: #f1f5f9; }
     .blog-card-body { padding: 14px 16px; }
-    .blog-card-body h3 { font-size: 15px; color: #1a1a2e; margin-bottom: 6px; }
+    .card-category { display: inline-block; font-size: 10.5px; font-weight: 700; color: #0088cc; background: #e6f4fb; border-radius: 20px; padding: 3px 10px; margin-bottom: 6px; }
+    .blog-card-body h2 { font-size: 15px; color: #1a1a2e; margin-bottom: 6px; }
     .blog-card-body p { font-size: 13px; color: #64748b; margin: 0; text-align: left; }
 
     .more-soon { text-align: center; font-size: 12.5px; color: #9ca3af; margin-top: 30px; }
@@ -100,7 +98,8 @@
 
     @media (max-width: 480px) {
       .blog-card-body { padding: 10px 12px; }
-      .blog-card-body h3 { font-size: 13px; }
+      .card-category { font-size: 9.5px; padding: 2px 8px; }
+      .blog-card-body h2 { font-size: 13px; }
       .blog-card-body p { font-size: 11.5px; }
     }
 
@@ -164,57 +163,40 @@
     <p class="intro">Find simple articles about All Yono Official website information, Android-related notes, and link checking. These articles are written to help users understand the website clearly before opening links or files.</p>
     <p class="home-link-line">Return to the <a href="/">All Yono Official</a> homepage anytime.</p>
 
-    <section class="blog-group" aria-labelledby="start-here-title">
-      <h2 class="group-title" id="start-here-title">Start Here</h2>
-      <div class="blog-card-list">
-        <a class="blog-card" href="/blog/all-yono-official-app-guide/" aria-label="Read: Website Basics for New Users">
-          <img class="blog-card-img" src="/blog-img/all-yono-official-app-guide.webp" alt="All Yono Official app guide image showing mobile access, safety checks, Android support, and user information" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
-          <div class="blog-card-body">
-            <h3>Website Basics for New Users</h3>
-            <p>Start here for basic All Yono Official website information and user reminders.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="blog-group" aria-labelledby="apk-notes-title">
-      <h2 class="group-title" id="apk-notes-title">Android / APK Notes</h2>
-      <div class="blog-card-list">
-        <a class="blog-card" href="/blog/all-yono-official-apk-information/" aria-label="Read: APK Information and Android Notes">
-          <img class="blog-card-img" src="/blog-img/all-yono-official-apk-information.webp" alt="All Yono Official APK information image showing Android file checks, mobile safety, permissions, and privacy reminders" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
-          <div class="blog-card-body">
-            <h3>APK Information and Android Notes</h3>
-            <p>Android file awareness, APK source checks, and permission reminders for mobile users.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="blog-group" aria-labelledby="link-awareness-title">
-      <h2 class="group-title" id="link-awareness-title">Link Awareness</h2>
-      <div class="blog-card-list">
-        <a class="blog-card" href="/blog/check-all-yono-official-link-safely/" aria-label="Read: Link Checking Basics">
-          <img class="blog-card-img" src="/blog-img/check-all-yono-official-link-safely.webp" alt="All Yono Official link safety image showing mobile link checks, secure browsing, and user privacy reminders" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
-          <div class="blog-card-body">
-            <h3>Link Checking Basics</h3>
-            <p>Simple steps for checking domains, redirects, and shared links before opening them.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="blog-group" aria-labelledby="login-access-title">
-      <h2 class="group-title" id="login-access-title">Login / Access Help</h2>
-      <div class="blog-card-list">
-        <a class="blog-card" href="/blog/all-yono-official-login-access/" aria-label="Read: Login Access Notes">
-          <img class="blog-card-img" src="/blog-img/all-yono-official-login-access.webp" alt="All Yono Official login access image showing app-only login notes, privacy reminders, OTP safety, and account protection checks" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
-          <div class="blog-card-body">
-            <h3>Login Access Notes</h3>
-            <p>App-only login reminders, OTP safety, and account protection tips for new users.</p>
-          </div>
-        </a>
-      </div>
-    </section>
+    <div class="blog-card-list">
+      <a class="blog-card" href="/blog/all-yono-official-app-guide/" aria-label="Read: Website Basics for New Users">
+        <img class="blog-card-img" src="/blog-img/all-yono-official-app-guide.webp" alt="All Yono Official app guide image showing mobile access, safety checks, Android support, and user information" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <span class="card-category">Start Here</span>
+          <h2>Website Basics for New Users</h2>
+          <p>Start here for basic All Yono Official website information and user reminders.</p>
+        </div>
+      </a>
+      <a class="blog-card" href="/blog/all-yono-official-apk-information/" aria-label="Read: APK Information and Android Notes">
+        <img class="blog-card-img" src="/blog-img/all-yono-official-apk-information.webp" alt="All Yono Official APK information image showing Android file checks, mobile safety, permissions, and privacy reminders" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <span class="card-category">Android / APK Notes</span>
+          <h2>APK Information and Android Notes</h2>
+          <p>Android file awareness, APK source checks, and permission reminders for mobile users.</p>
+        </div>
+      </a>
+      <a class="blog-card" href="/blog/check-all-yono-official-link-safely/" aria-label="Read: Link Checking Basics">
+        <img class="blog-card-img" src="/blog-img/check-all-yono-official-link-safely.webp" alt="All Yono Official link safety image showing mobile link checks, secure browsing, and user privacy reminders" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <span class="card-category">Link Awareness</span>
+          <h2>Link Checking Basics</h2>
+          <p>Simple steps for checking domains, redirects, and shared links before opening them.</p>
+        </div>
+      </a>
+      <a class="blog-card" href="/blog/all-yono-official-login-access/" aria-label="Read: Login Access Notes">
+        <img class="blog-card-img" src="/blog-img/all-yono-official-login-access.webp" alt="All Yono Official login access image showing app-only login notes, privacy reminders, OTP safety, and account protection checks" width="1200" height="675" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <div class="blog-card-body">
+          <span class="card-category">Login / Access Help</span>
+          <h2>Login Access Notes</h2>
+          <p>App-only login reminders, OTP safety, and account protection tips for new users.</p>
+        </div>
+      </a>
+    </div>
 
     <p class="more-soon"><i class="fa-solid fa-pen-nib"></i>More articles coming soon.</p>
 
