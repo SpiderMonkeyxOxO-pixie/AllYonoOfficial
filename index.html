@@ -105,15 +105,19 @@
     .tab.active { background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
 
     /* App List */
-    .app-list_dont_copy { display: flex; flex-direction: column; gap: 8px; padding: 10px 16px 30px; counter-reset: app-rank; }
-    .app-item_dont_copy { background: #ffffff; border-radius: 14px; padding: 12px; display: flex; align-items: center; gap: 12px; border: 1px solid #e5e7eb; transition: box-shadow .2s; }
-    .app-item_dont_copy::before { counter-increment: app-rank; content: counter(app-rank) "."; font-weight: 800; color: #9ca3af; min-width: 25px; font-size: 14px; }
-    .app-icon-sm { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; background: #f1f5f9; }
-    .app-details { flex: 1; min-width: 0; }
-    .app-details .app-name { font-size: 14px; font-weight: 700; color: #1a1a2e; }
-    .bonus-txt { color: #b91c1c !important; font-size: 11px; font-weight: 700; display: block; }
-    .withdraw-txt { color: green !important; font-size: 11px; font-weight: 700; display: block; }
-    .dl-mini { display: inline-block; background: #1a1a2e; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 11px; font-weight: 700; border: none; cursor: pointer; }
+    .app-list_dont_copy { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px 16px 30px; counter-reset: app-rank; }
+    .app-item_dont_copy { position: relative; background: #ffffff; border-radius: 14px; padding: 12px 10px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; border: 1px solid #e5e7eb; transition: box-shadow .2s; }
+    .app-item_dont_copy::before { counter-increment: app-rank; content: counter(app-rank) "."; position: absolute; top: 8px; left: 10px; font-weight: 800; color: #9ca3af; font-size: 12px; }
+    .app-icon-sm { width: 52px; height: 52px; border-radius: 12px; object-fit: cover; background: #f1f5f9; margin-top: 6px; }
+    .app-details { width: 100%; min-width: 0; }
+    .app-details .app-name { font-size: 13px; font-weight: 700; color: #1a1a2e; margin-bottom: 2px; }
+    .bonus-txt { color: #b91c1c !important; font-size: 10.5px; font-weight: 700; display: block; }
+    .withdraw-txt { color: green !important; font-size: 10.5px; font-weight: 700; display: block; margin-bottom: 6px; }
+    .dl-mini { display: block; width: 100%; background: #1a1a2e; color: #fff; padding: 8px 0; border-radius: 20px; font-size: 11px; font-weight: 700; border: none; cursor: pointer; text-align: center; }
+
+    @media (min-width: 700px) {
+      .app-list_dont_copy { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    }
 
     /* Trust strip */
     .trust-strip { display: flex; justify-content: center; gap: 10px; padding: 22px 16px; background: #fff; flex-wrap: wrap; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
