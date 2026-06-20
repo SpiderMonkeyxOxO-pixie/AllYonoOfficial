@@ -20,7 +20,6 @@ const promoCodes = {
     { name: 'Club INR', code: 'CLUBINR.BONUS175-AM' },
     { name: 'Yono Rummy', code: 'YONORUMMY.BONUS165-AM' },
     { name: 'Slots Winner', code: 'SLOTSWINNER.BONUS150-AM' },
-    { name: 'Spin 777', code: 'SPIN777.BONUS175-AM' },
     { name: 'Spin Gold', code: 'SPINGOLD.BONUS150-AM' }
   ],
   afternoon: [
