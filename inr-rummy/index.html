@@ -118,6 +118,35 @@
     @media (max-width: 480px) {
       .header-text { font-size: 15px; } .social-btn { width: 95px; } .navbar a { padding: 10px 8px; font-size: 11px; } .app-detail-card { padding: 15px; } .tg-header-btn { display: none; }
     }
+  
+    /* ── Payment + Share (added) ── */
+    .payment-strip { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin: 10px 16px; text-align: center; }
+    .payment-label { font-size: 13px; color: #475569; margin-bottom: 8px; }
+    .payment-icons { display: flex; justify-content: center; align-items: center; gap: 14px; font-weight: 800; font-size: 15px; color: #1a1a2e; margin-bottom: 12px; }
+    .payment-icons i { color: #16a34a; margin-right: 4px; }
+    .share-btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #1a1a2e; color: #1a1a2e; background: #fff; font-weight: 700; font-size: 13px; padding: 8px 18px; border-radius: 20px; cursor: pointer; }
+
+    /* ── Suggested Apps (added) ── */
+    .section-cursive { font-family: cursive; font-size: 22px; text-align: center; color: #1a1a2e; margin: 22px 0 12px; }
+    .suggested-section { padding: 0 16px 6px; }
+    .suggested-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .pick-card { position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 10px 6px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,.05); }
+    .pick-icon { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; margin: 0 auto 6px; background: #f1f5f9; }
+    .pick-name { font-size: 11px; font-weight: 700; color: #1a1a2e; margin-bottom: 3px; }
+    .pick-bonus { color: #b91c1c !important; font-size: 9.5px; font-weight: 700; display: block; }
+    .pick-min { color: green !important; font-size: 9.5px; font-weight: 700; display: block; margin-bottom: 6px; }
+    .pick-dl { display: inline-flex; align-items: center; gap: 4px; border: 1.5px solid #16a34a; color: #16a34a; background: #fff; font-size: 9.5px; font-weight: 800; padding: 4px 8px; border-radius: 16px; }
+    .pick-dl:hover { background: #16a34a; color: #fff; }
+
+    /* ── Long-form content (added) ── */
+    .seo-content { padding: 6px 16px 20px; }
+    .seo-content h2 { font-size: 16px; color: #1a1a2e; margin: 16px 0 8px; border-left: 5px solid #0088cc; padding-left: 10px; }
+    .seo-content p { font-size: 13.5px; color: #334155; text-align: justify; margin-bottom: 10px; }
+    .seo-content a { color: #0088cc; font-weight: 700; }
+
+    @media (min-width: 700px) {
+      .suggested-grid { gap: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -137,6 +166,8 @@
   <a href="/about-us.html">About</a>
   <a href="/contact-us.html">Contact Us</a>
   <a href="/blog/">Blogs</a>
+    <a href="/app-checker/">App Checker</a>
+  <a href="/most-rated-apps/">Most Rated Apps</a>
   <a href="/telegram-link.html" target="_blank">Telegram</a>
 </nav>
 
@@ -162,78 +193,91 @@
   </div>
 </div>
 
-<h2 class="section-title">Explore All Games</h2>
-<ul class="app-list_dont_copy" id="full-game-list"></ul>
+<div class="payment-strip">
+  <p class="payment-label">Withdraw winnings directly to your</p>
+  <div class="payment-icons"><i class="fa-solid fa-mobile-screen-button"></i> UPI <i class="fa-solid fa-money-bill-transfer"></i> IMPS</div>
+  <button class="share-btn-outline" onclick="if(navigator.share){navigator.share({title:document.title, url:window.location.href})}"><i class="fa-solid fa-share-nodes"></i> Share INR Rummy Apk</button>
+</div>
 
-<script>
-  const games = [
-    {n:"Jaiho 777 VIP", b:"₹180", i:"jaiho777vip.webp", l:"jaiho777-vip"},
-    {n:"Yono Vip", b:"₹175", i:"Yono-Vip.webp", l:"yono-vip"},
-    {n:"MBM Bet", b:"₹195", i:"MBM-Bet.webp", l:"mbm-bet"},
-    {n:"Yono 777", b:"₹150", i:"Yono-777.webp", l:"yono-777"},
-    {n:"789 Jackpots", b:"₹175", i:"789-Jackpot.webp", l:"789-jackpot"},
-    {n:"777 Game", b:"₹165", i:"777Game.webp", l:"777-game"},
-    {n:"Joy Rummy", b:"₹99", i:"Joy-Rummy.webp", l:"joy-rummy"},
-    {n:"Boss Rummy", b:"₹165", i:"Boss-Rummy-1024x1024.webp", l:"boss-rummy"},
-    {n:"Ever 777", b:"₹165", i:"Ever777.com_.webp", l:"ever-777"},
-    {n:"Rummy 888", b:"₹185", i:"Rummy888.webp", l:"rummy888"},
-    {n:"Rummy 77", b:"₹175", i:"Rummy77.webp", l:"rummy77"},
-    {n:"Rummy Ludo", b:"₹175", i:"Rummy-Ludo-LOGO.webp", l:"rummy-ludo"},
-    {n:"101z", b:"₹165", i:"101z.webp", l:"101z"},
-    {n:"567 Slots", b:"₹190", i:"567-Slots.webp", l:"567-slots"},
-    {n:"JaiHo 777", b:"₹155", i:"Jahio-777.webp", l:"jaiho777"},
-    {n:"Club INR", b:"₹175", i:"Club-INR-1.webp", l:"club-inr"},
-    {n:"OK Rummy", b:"₹150", i:"OkRUMMY-e1760950706977-1.webp", l:"ok-rummy"},
-    {n:"Yono Rummy", b:"₹165", i:"Yono-Slots.webp", l:"yono-rummy"},
-    {n:"Slots Winner", b:"₹150", i:"Slots-Winner.webp", l:"slots-winner"},
-    {n:"Spin 777", b:"₹175", i:"Spin-777.webp", l:"spin777"},
-    {n:"Spin Crush", b:"₹150", i:"Spin-Crush.webp", l:"spin-crush"},
-    {n:"Spin Gold", b:"₹150", i:"Spin-Gold.webp", l:"spin-gold"},
-    {n:"Spin Winner", b:"₹150", i:"Spin-Winner.webp", l:"spin-winner"},
-    {n:"Yes Spin", b:"₹150", i:"Yes-Spin.webp", l:"yes-spin"},
-    {n:"YN 777", b:"₹150", i:"Yn-777.webp", l:"yn777"},
-    {n:"Yono Arcade", b:"₹150", i:"Yono-Arcade.webp", l:"yono-arcade"},
-    {n:"JaiHo Win", b:"₹150", i:"Jaiho-Win.webp", l:"jaiHo-win"},
-    {n:"Maha Games", b:"₹150", i:"Maha-Games.webp", l:"maha-games"},
-    {n:"Neta Vip", b:"₹150", i:"Neta-Vip.webp", l:"neta-vip"},
-    {n:"Rumble Rummy", b:"₹180", i:"Rumble-Rummy.webp", l:"rumble-rummy"},
-    {n:"Rummy 91", b:"₹185", i:"Rummy-91.webp", l:"rummy91"},
-    {n:"Share Slots", b:"₹165", i:"Share-Slots.webp", l:"share-slots"},
-    {n:"Saga Slots", b:"₹185", i:"Saga-Slots.webp", l:"saga-slots"},
-    {n:"Slots Spin", b:"₹185", i:"Slot-Spin.webp", l:"slot-spin"},
-    {n:"Game Rummy", b:"₹180", i:"Game-Rummy.webp", l:"game-rummy"},
-    {n:"HI Rummy", b:"₹140", i:"Hi-Rummy.webp", l:"hi-rummy"},
-    {n:"IND Club", b:"₹160", i:"Ind-Club.webp", l:"ind-club"},
-    {n:"IND Rummy", b:"₹176", i:"Ind-Rummy.webp", l:"ind-rummy"},
-    {n:"IND Slots", b:"₹165", i:"Ind-Slots.webp", l:"ind-slots"},
-    {n:"JaiHo Arcade", b:"₹150", i:"Jaiho-Arcade-1.webp", l:"jaiho-arcade"},
-    {n:"JaiHo Rummy", b:"₹150", i:"Jaiho-Rummy.webp", l:"jaiho-rummy"},
-    {n:"JaiHo Slots", b:"₹150", i:"Jaiho-Slot.webp", l:"jaiho-slots"},
-    {n:"GoGo Rummy", b:"₹190", i:"Gogo-Rummy.webp", l:"gogo-rummy"},
-    {n:"JaiHo Spin", b:"₹150", i:"Jaiho-Spin.webp", l:"jaiho-spin"},
-    {n:"Spin 101", b:"₹185", i:"Spin-101.webp", l:"spin101"},
-    {n:"Yono Games", b:"₹150", i:"Yono-Games.webp", l:"yono-games"},
-    {n:"Top Rummy", b:"₹190", i:"aelorbg65owsgr1pvyv2.webp", l:"top-rummy"},
-    {n:"ABC Rummy", b:"₹175", i:"ABC-Rummy.webp", l:"abc-rummy"},
-    {n:"Love Rummy", b:"₹175", i:"at9zwghcmujmrj8fze1h.webp", l:"love-rummy"},
-    {n:"Bet 213", b:"₹250", i:"Bet-213.webp", l:"bet213"},
-    {n:"Bingo 101", b:"₹150", i:"Bingo-101.webp", l:"bingo101"},
-    {n:"Play Karo", b:"₹175", i:"Play-Karo.webp", l:"play-klaro"},
-    {n:"Teen Patti Dhan", b:"₹175", i:"Teen-patti-Dhan.webp", l:"teen-patti-dhan"},
-    {n:"Win Clash", b:"₹150", i:"Win-Clash.webp", l:"win-clash"},
-    {n:"MPL BET", b:"₹165", i:"MPL-BET.webp", l:"mpl-bet"},
-    {n:"Jeetexch", b:"₹150", i:"Jeetexch.webp", l:"jeetexch"},
-    {n:"eIPL", b:"₹150", i:"EIPL.webp", l:"eipl"},
-    {n:"V3Game", b:"₹150", i:"V3-Game.webp", l:"v3-game"},
-    {n:"82 Lottery", b:"₹160", i:"82-Lottery.webp", l:"82lottery"}
-  ];
+<h2 class="section-cursive">Suggested Apps</h2>
+<div class="suggested-section">
+  <div class="suggested-grid">
+        <a class="pick-card" href="/rumble-rummy/" aria-label="Download Rumble Rummy">
+          <img class="pick-icon" src="../app_icon/Rumble-Rummy.webp" alt="Rumble Rummy app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">Rumble Rummy</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹180</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/rummy91/" aria-label="Download Rummy 91">
+          <img class="pick-icon" src="../app_icon/Rummy-91.webp" alt="Rummy 91 app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">Rummy 91</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹185</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/game-rummy/" aria-label="Download Game Rummy">
+          <img class="pick-icon" src="../app_icon/Game-Rummy.webp" alt="Game Rummy app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">Game Rummy</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹180</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/hi-rummy/" aria-label="Download HI Rummy">
+          <img class="pick-icon" src="../app_icon/Hi-Rummy.webp" alt="HI Rummy app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">HI Rummy</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹140</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/ind-rummy/" aria-label="Download IND Rummy">
+          <img class="pick-icon" src="../app_icon/Ind-Rummy.webp" alt="IND Rummy app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">IND Rummy</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹176</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/jaiho-rummy/" aria-label="Download JaiHo Rummy">
+          <img class="pick-icon" src="../app_icon/Jaiho-Rummy.webp" alt="JaiHo Rummy app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">JaiHo Rummy</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹150</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/101z/" aria-label="Download 101z">
+          <img class="pick-icon" src="../app_icon/101z.webp" alt="101z app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">101z</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹165</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/567-slots/" aria-label="Download 567 Slots">
+          <img class="pick-icon" src="../app_icon/567-Slots.webp" alt="567 Slots app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">567 Slots</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹190</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+        <a class="pick-card" href="/jaiho777/" aria-label="Download JaiHo 777">
+          <img class="pick-icon" src="../app_icon/Jahio-777.webp" alt="JaiHo 777 app icon" width="44" height="44" loading="lazy" decoding="async">
+          <p class="pick-name">JaiHo 777</p>
+          <span class="pick-bonus"><i class="fa-solid fa-gift"></i> ₹155</span>
+          <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+          <span class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</span>
+        </a>
+  </div>
+</div>
 
-  document.getElementById('full-game-list').innerHTML = games
-    .filter(g => g.n !== "INR Rummy")
-    .map(g => `
-    <li class="app-item_dont_copy"><img src="../app_icon/${g.i}" alt="${g.n} app icon" class="app-icon-sm"><div class="app-details"><h6>${g.n}</h6><span class="bonus-txt"><i class="fa-solid fa-gift"></i> Sign Up Bonus ${g.b}</span><span class="withdraw-txt"><i class="fa-solid fa-building-columns"></i> Min. Withdraw ₹100</span></div><a href="/${g.l}/"><button class="dl-mini">Download</button></a></li>
-  `).join('');
-</script>
+<div class="seo-content">
+  <h2>Download INR Rummy APK Latest Version Safely</h2>
+  <p>Before installing INR Rummy, take a moment to confirm the download link matches the one listed here rather than a copy found elsewhere. This is a common step for any rummy app, and it's covered in more detail in our <a href="/blog/check-all-yono-official-link-safely/">checking a link safely</a> article.</p>
+  <h2>What is INR Rummy and How Does It Work?</h2>
+  <p>At its core, INR Rummy works like most rummy apps: players open the app, pick a table or round, and start playing within a few taps. The app includes points rummy tables and quick 2-player tables aimed at keeping sessions quick. For readers new to this category, our <a href="/blog/all-yono-official-app-guide/">app guide for new users</a> covers the basics worth knowing first.</p>
+  <h2>Popular Game Modes and Features</h2>
+  <p>Inside INR Rummy, players can choose between pool rummy formats and quick 2-player tables, depending on how much time they have for a session. These formats are common across rummy apps in general, but exact options and availability may vary by app version and server activity.</p>
+  <h2>INR Rummy Performance and User Experience</h2>
+  <p>Performance on INR Rummy depends on device and network conditions, like most rummy app apps. The sign-up bonus is listed at ₹150, and the minimum withdrawal threshold is ₹100. If you're undecided, our <a href="/most-rated-apps/">Most Rated Apps</a> page lists other options, including <a href="/rummy91/">Rummy 91</a>, for side-by-side comparison.</p>
+</div>
 
 <a href="/" class="home-banner">Click Here Go To Home</a>
 
@@ -242,11 +286,6 @@
   <p><b>AllYonoOfficial.Com</b> do not run or own the apps listed here. Only for <b>18+ people</b>.</p>
   <p>Please read our <b><a href="/disclaimer.html" style="text-decoration:underline; color:purple;">Disclaimer page</a></b>.</p>
   <p><b>Alert:</b> Rummy is banned in AP, Sikkim, Nagaland, Assam, TN, Odisha, and Telangana.</p>
-</div>
-
-<div class="share-card" onclick="if(navigator.share){navigator.share({title:document.title, url:window.location.href})}">
-  <div class="share-info"><i class="fa-solid fa-square-share-nodes"></i> Share With Friends!</div>
-  <div class="share-btn-green"><i class="fa-solid fa-share-from-square"></i> Click Here To Share</div>
 </div>
 
 <div class="ticker-wrap">
