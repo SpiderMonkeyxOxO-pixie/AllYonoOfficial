@@ -352,7 +352,7 @@
   <p class="top-picks-intro">Find top Yono games and apps on All Yono Official in one place with safe and trusted download options.</p>
   <div class="top-picks-row">
     <div class="pick-card">
-      <img class="pick-icon" src="app_icon/Jahio-777.webp" alt="JaiHo 777 app icon" width="56" height="56" loading="lazy" decoding="async">
+      <img class="pick-icon" src="app_icon/Jahio-777.webp" alt="JaiHo 777 app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">JaiHo 777</p>
       <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹155</span>
       <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
@@ -360,14 +360,14 @@
     </div>
     <div class="pick-card top-pick">
       <span class="pick-badge"><i class="fa-solid fa-star"></i> Top Pick</span>
-      <img class="pick-icon" src="app_icon/Yono-777.webp" alt="Yono 777 app icon" width="56" height="56" loading="lazy" decoding="async">
+      <img class="pick-icon" src="app_icon/Yono-777.webp" alt="Yono 777 app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Yono 777</p>
       <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
       <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
       <a href="/yono-777/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card">
-      <img class="pick-icon" src="app_icon/jaiho777vip.webp" alt="Jaiho 777 VIP app icon" width="56" height="56" loading="lazy" decoding="async">
+      <img class="pick-icon" src="app_icon/jaiho777vip.webp" alt="Jaiho 777 VIP app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Jaiho 777 VIP</p>
       <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹180</span>
       <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
@@ -458,6 +458,7 @@
 
   // Enhanced render function that handles all 7 categories
   function renderGames(type, el) {
+    initialRendered = true;
     // Update active tab class
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     el.classList.add('active');
@@ -507,12 +508,24 @@
     `).join('');
   }
 
-  // Initialize with 'all' category on page load
-  const defaultTab = document.querySelector('.tab[data-cat="all"]');
-  if (defaultTab) {
-    renderGames('all', defaultTab);
+  // Defer the initial 57-icon render until the app list is about to enter
+  // view, so its image requests don't compete with the hero LCP image for
+  // bandwidth on slow connections. A direct tab click (via renderGames)
+  // also satisfies this and disconnects the observer.
+  let initialRendered = false;
+  function renderInitial() {
+    if (initialRendered) return;
+    const defaultTab = document.querySelector('.tab[data-cat="all"]');
+    renderGames('all', defaultTab || document.querySelector('.tab'));
+  }
+  const appsSection = document.getElementById('apps');
+  if ('IntersectionObserver' in window && appsSection) {
+    const appsObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) { renderInitial(); appsObserver.disconnect(); }
+    }, { rootMargin: '200px 0px' });
+    appsObserver.observe(appsSection);
   } else {
-    renderGames('all', document.querySelector('.tab'));
+    renderInitial();
   }
 
   // Fill in honest, data-driven trust copy (no fabricated numbers)
