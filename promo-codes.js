@@ -43,5 +43,6 @@ const promoCodes = {
     { name: 'MPL BET', code: 'MPLBET.BONUS165-EVE' },
     { name: 'Jeetexch', code: 'JEETEXCH.BONUS150-EVE' },
     { name: '82 Lottery', code: '82LOTTERY.BONUS160-EVE' }
+    { name: 'Spin101', code: 'spin101-a.org-EVE' }
   ]
 };
