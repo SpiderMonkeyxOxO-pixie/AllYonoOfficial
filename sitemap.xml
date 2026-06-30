@@ -16,6 +16,24 @@
   <url><loc>https://allyonoofficial.com/most-rated-apps/</loc></url>
   <url><loc>https://allyonoofficial.com/videos/</loc></url>
 
+  <!-- CATEGORY PAGES -->
+  <url>
+    <loc>https://allyonoofficial.com/rummy-apps/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://allyonoofficial.com/slot-games/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://allyonoofficial.com/bingo-apps/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://allyonoofficial.com/spin-games/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
   <!-- BLOG POSTS -->
   <url><loc>https://allyonoofficial.com/blog/</loc></url>
   <url><loc>https://allyonoofficial.com/blog/all-yono-official-apk-information/</loc></url>
@@ -24,6 +42,7 @@
   <url><loc>https://allyonoofficial.com/blog/all-yono-official-login-access/</loc></url>
   <url><loc>https://allyonoofficial.com/blog/all-yono-official-faqs/</loc></url>
   <url><loc>https://allyonoofficial.com/blog/all-yono-official-customer-support/</loc></url>
+  <url><loc>https://allyonoofficial.com/blog/all-yono-official-referral-code-safety/</loc></url>
 
   <!-- GAME PAGES -->
   <url><loc>https://allyonoofficial.com/101z/</loc></url>
