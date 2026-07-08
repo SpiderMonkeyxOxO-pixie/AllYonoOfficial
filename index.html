@@ -457,6 +457,11 @@
     {n:"Max Rummy", b:"150", i:"Max-Rummy-1024x1024.webp", l:"max-rummy", t:"new", sub:"rummy"}
   ];
 
+  // Apps already shown in the Top Picks section above are excluded here
+  // so they don't also appear a second time in the full list below.
+  const TOP_PICK_SLUGS = ['yono-games', 'max-rummy', 'yono-rummy'];
+  const listGames = games.filter(g => !TOP_PICK_SLUGS.includes(g.l));
+
   // Enhanced render function that handles all 7 categories
   function renderGames(type, el) {
     initialRendered = true;
@@ -467,25 +472,25 @@
     let filteredGames = [];
 
     if (type === 'all') {
-      filteredGames = games;
+      filteredGames = listGames;
     }
     else if (type === 'best') {
-      filteredGames = games.filter(g => g.t === 'best');
+      filteredGames = listGames.filter(g => g.t === 'best');
     }
     else if (type === 'new') {
-      filteredGames = games.filter(g => g.t === 'new');
+      filteredGames = listGames.filter(g => g.t === 'new');
     }
     else if (type === 'bingo') {
-      filteredGames = games.filter(g => g.sub === 'bingo');
+      filteredGames = listGames.filter(g => g.sub === 'bingo');
     }
     else if (type === 'rummy') {
-      filteredGames = games.filter(g => g.sub === 'rummy');
+      filteredGames = listGames.filter(g => g.sub === 'rummy');
     }
     else if (type === 'slots') {
-      filteredGames = games.filter(g => g.sub === 'slots');
+      filteredGames = listGames.filter(g => g.sub === 'slots');
     }
     else if (type === 'spin') {
-      filteredGames = games.filter(g => g.sub === 'spin');
+      filteredGames = listGames.filter(g => g.sub === 'spin');
     }
 
     const container = document.getElementById('full-game-list');
