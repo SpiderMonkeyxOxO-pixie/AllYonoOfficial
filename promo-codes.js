@@ -19,6 +19,7 @@ const promoCodes = {
     { name: 'JaiHo 777', code: 'JAIHO777.BONUS155-AM' },
     { name: 'Club INR', code: 'CLUBINR.BONUS175-AM' },
     { name: 'Yono Rummy', code: 'YONORUMMY.BONUS165-AM' },
+    { name: 'Max Rummy', code: 'MAXRUMMY.BONUS150-AM' },
     { name: 'Slots Winner', code: 'SLOTSWINNER.BONUS150-AM' },
     { name: 'Spin Gold', code: 'SPINGOLD.BONUS150-AM' }
   ],
