@@ -143,6 +143,31 @@
       .pick-dl { font-size: 10px; padding: 5px 10px; }
     }
 
+    /* Coming Soon banner */
+    .coming-soon-section { padding: 8px 16px 24px; }
+    .coming-soon-card { position: relative; overflow: hidden; background: #fff; border: 1px solid #ede9fe; border-radius: 16px; padding: 22px 16px 18px; box-shadow: 0 4px 14px rgba(124,58,237,.10); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+    .coming-soon-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #7c3aed, #a855f7); }
+    .cs-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 2px; }
+    .cs-tag { font-size: 10px; font-weight: 800; letter-spacing: .3px; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; }
+    .cs-tag.soon { background: #ede9fe; color: #6d28d9; }
+    .cs-tag.sched { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+    .coming-soon-icon { width: 64px; height: 64px; border-radius: 14px; object-fit: cover; background: #f1f5f9; box-shadow: 0 4px 10px rgba(0,0,0,.15); margin-bottom: 4px; }
+    .coming-soon-card h3 { font-size: 15.5px; font-weight: 800; color: #1a1a2e; }
+    .coming-soon-card p { font-size: 12.5px; color: #64748b; max-width: 480px; }
+    .cs-countdown { display: flex; gap: 8px; justify-content: center; margin: 6px 0 4px; }
+    .cs-countdown div { background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 10px; min-width: 54px; padding: 8px 4px; }
+    .cs-countdown b { font-size: 18px; color: #5b21b6; display: block; font-variant-numeric: tabular-nums; }
+    .cs-countdown span { font-size: 9px; color: #7c3aed; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; }
+    .cs-live-msg { font-size: 13px; font-weight: 700; color: #6d28d9; margin: 6px 0 4px; }
+    .cs-tg-btn { display: inline-flex; align-items: center; gap: 6px; background: #7c3aed; color: #fff; padding: 10px 22px; border-radius: 20px; font-weight: 800; font-size: 13px; margin-top: 6px; }
+    .cs-tg-btn:hover { background: #6d28d9; }
+    .cs-details-link { font-size: 12px; font-weight: 700; color: #7c3aed; margin-top: 10px; text-decoration: underline; }
+    @media (max-width: 420px) {
+      .coming-soon-card { padding: 18px 12px 14px; }
+      .cs-countdown div { min-width: 46px; padding: 6px 3px; }
+      .cs-countdown b { font-size: 15px; }
+    }
+
     /* Trust strip */
     .trust-strip { display: flex; justify-content: center; gap: 10px; padding: 22px 16px; background: #fff; flex-wrap: wrap; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
     .trust-item { text-align: center; min-width: 110px; }
@@ -377,6 +402,26 @@
   </div>
 </section>
 
+<section class="coming-soon-section" aria-labelledby="coming-soon-title">
+  <div class="coming-soon-card">
+    <div class="cs-badges">
+      <span class="cs-tag soon"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
+      <span class="cs-tag sched">Scheduled</span>
+    </div>
+    <img class="coming-soon-icon" src="app_icon/Dhan-Game.webp" alt="DhanGame app icon" width="64" height="64" loading="lazy" decoding="async">
+    <h3 id="coming-soon-title">DhanGame is joining All Yono Official</h3>
+    <p>Expected to launch between 8:00–9:00 AM IST on 23 July 2026. We'll add category, promo code, voucher and safety information once the app is live and can be independently reviewed.</p>
+    <div class="cs-countdown" id="dhan-countdown">
+      <div><b id="cs-d">--</b><span>Days</span></div>
+      <div><b id="cs-h">--</b><span>Hrs</span></div>
+      <div><b id="cs-m">--</b><span>Min</span></div>
+      <div><b id="cs-s">--</b><span>Sec</span></div>
+    </div>
+    <a href="/telegram-link.html" target="_blank" class="cs-tg-btn"><i class="fa-brands fa-telegram"></i> Join Telegram for launch updates</a>
+    <a href="/blog/dhangame-launch-announcement/" class="cs-details-link">Read the full DhanGame launch details</a>
+  </div>
+</section>
+
 <h2 class="section-cursive">All Yono Games &amp; Apps</h2>
 
 <section id="apps">
@@ -555,6 +600,36 @@
     document.getElementById('hero-highlight').textContent = games.length + '+ Verified Apps Updated Daily';
     document.getElementById('stat-apps').textContent = games.length + '+';
   });
+
+  // Live countdown to the DhanGame launch window (8:00 AM IST, 23 Jul 2026)
+  (function () {
+    const target = new Date('2026-07-23T08:00:00+05:30').getTime();
+    const wrap = document.getElementById('dhan-countdown');
+    if (!wrap) return;
+    const dEl = document.getElementById('cs-d');
+    const hEl = document.getElementById('cs-h');
+    const mEl = document.getElementById('cs-m');
+    const sEl = document.getElementById('cs-s');
+    let timer;
+    function tick() {
+      const diff = target - Date.now();
+      if (diff <= 0) {
+        wrap.innerHTML = '<p class="cs-live-msg"><i class="fa-solid fa-circle-check"></i> DhanGame has launched — check back for its listing!</p>';
+        if (timer) clearInterval(timer);
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      dEl.textContent = d;
+      hEl.textContent = String(h).padStart(2, '0');
+      mEl.textContent = String(m).padStart(2, '0');
+      sEl.textContent = String(s).padStart(2, '0');
+    }
+    tick();
+    timer = setInterval(tick, 1000);
+  })();
 </script>
 
 <section class="trust-strip">
