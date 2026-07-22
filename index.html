@@ -122,10 +122,12 @@
     /* Top Picks */
     .top-picks-section { padding: 24px 16px 8px; }
     .top-picks-intro { text-align: center; font-size: 13px; color: #475569; max-width: 480px; margin: 0 auto 18px; }
-    .top-picks-row { display: flex; gap: 10px; justify-content: center; align-items: flex-start; }
-    .pick-card { position: relative; flex: 1 1 0; max-width: 150px; background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px 8px 12px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,.05); }
+    .top-picks-row { display: flex; flex-wrap: wrap; gap: 10px 10px; justify-content: center; align-items: flex-start; }
+    .pick-card { position: relative; flex: 1 1 140px; max-width: 150px; background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px 8px 12px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,.05); margin-top: 10px; }
     .pick-card.top-pick { border-color: #16a34a; box-shadow: 0 6px 16px rgba(22,163,74,.15); }
+    .pick-card.coming-pick { border-color: #7c3aed; box-shadow: 0 6px 16px rgba(124,58,237,.15); }
     .pick-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #16a34a; color: #fff; font-size: 9px; font-weight: 800; letter-spacing: .4px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+    .pick-badge.coming { background: #7c3aed; }
     .pick-icon { width: 56px; height: 56px; border-radius: 12px; object-fit: cover; background: #f1f5f9; margin: 4px auto 8px; }
     .pick-name { font-size: 13px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
     .pick-bonus { color: #b91c1c !important; font-size: 10.5px; font-weight: 700; display: block; }
@@ -377,12 +379,13 @@
   <h2 id="top-picks-title" class="section-title">Top Picks</h2>
   <p class="top-picks-intro">Find top Yono games and apps on All Yono Official in one place with safe and trusted download options.</p>
   <div class="top-picks-row">
-    <div class="pick-card">
-      <img class="pick-icon" src="app_icon/Yono-Games.webp" alt="Yono Games app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
-      <p class="pick-name">Yono Games</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
+    <div class="pick-card coming-pick">
+      <span class="pick-badge coming"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
+      <img class="pick-icon" src="app_icon/Dhan-Game.webp" alt="DhanGame app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
+      <p class="pick-name">DhanGame</p>
+      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹100-500</span>
       <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
-      <a href="/yono-games/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
+      <a href="/dhangame/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card top-pick">
       <span class="pick-badge"><i class="fa-solid fa-star"></i> Top Pick</span>
@@ -398,6 +401,27 @@
       <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹165</span>
       <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
       <a href="/yono-rummy/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
+    </div>
+    <div class="pick-card">
+      <img class="pick-icon" src="app_icon/Yono-Games.webp" alt="Yono Games app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
+      <p class="pick-name">Yono Games</p>
+      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
+      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <a href="/yono-games/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
+    </div>
+    <div class="pick-card">
+      <img class="pick-icon" src="app_icon/Yono-777.webp" alt="Yono 777 app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
+      <p class="pick-name">Yono 777</p>
+      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
+      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <a href="/yono-777/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
+    </div>
+    <div class="pick-card">
+      <img class="pick-icon" src="app_icon/Yono-Arcade.webp" alt="Yono Arcade app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
+      <p class="pick-name">Yono Arcade</p>
+      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
+      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <a href="/yono-arcade/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
   </div>
 </section>
@@ -443,6 +467,7 @@
   // Original games array with enhanced categories: added 'categoryType' for bingo, rummy, slots, spin
   // I preserved every original game and added appropriate sub-category flags without changing names or links.
   const games = [
+    {n:"DhanGame", b:"100-500", i:"Dhan-Game.webp", l:"dhangame", t:"new", sub:"slots"},
     {n:"Yono 777", b:"150", i:"Yono-777.webp", l:"yono-777", t:"best", sub:"slots"},
     {n:"Jaiho 777 VIP", b:"180", i:"jaiho777vip.webp", l:"jaiho777-vip", t:"best", sub:"slots"},
     {n:"JaiHo 777", b:"155", i:"Jahio-777.webp", l:"jaiho777", t:"best", sub:"slots"},
@@ -507,7 +532,7 @@
 
   // Apps already shown in the Top Picks section above are excluded here
   // so they don't also appear a second time in the full list below.
-  const TOP_PICK_SLUGS = ['yono-games', 'max-rummy', 'yono-rummy'];
+  const TOP_PICK_SLUGS = ['dhangame', 'max-rummy', 'yono-rummy', 'yono-games', 'yono-777', 'yono-arcade'];
   const listGames = games.filter(g => !TOP_PICK_SLUGS.includes(g.l));
 
   // Enhanced render function that handles all 7 categories

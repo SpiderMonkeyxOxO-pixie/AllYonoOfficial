@@ -28,7 +28,8 @@ const promoCodes = {
     { name: 'Rummy 91', code: 'rummy91.vip' },
     { name: 'Jaiho Spin', code: 'jaihospin.vip' },
     { name: 'IND Slots', code: 'indslotsreferral.com' },
-    { name: 'Max Rummy', code: 'ADD-REAL-CODE-HERE' }
+    { name: 'Max Rummy', code: 'ADD-REAL-CODE-HERE' },
+    { name: 'DhanGame', code: 'ADD-REAL-CODE-HERE' }
   ],
   afternoon: [
 
