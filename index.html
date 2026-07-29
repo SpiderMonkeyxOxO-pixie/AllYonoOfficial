@@ -381,12 +381,12 @@
   <p class="top-picks-intro">Find top Yono games and apps on All Yono Official in one place with safe and trusted download options.</p>
   <div class="top-picks-row">
     <div class="pick-card coming-pick">
-      <span class="pick-badge coming"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
+      <span class="pick-badge coming"><i class="fa-solid fa-bolt"></i> Just Launched</span>
       <img class="pick-icon" src="app_icon/Win-Rummy.webp" alt="Win Rummy app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Win Rummy</p>
-      <span class="pick-bonus"><i class="fa-solid fa-hourglass-half"></i> Launching Soon</span>
-      <span class="pick-min"><i class="fa-solid fa-calendar-day"></i> 29 Jul 2026</span>
-      <a href="#coming-soon-title" class="pick-dl"><i class="fa-solid fa-circle-info"></i> Details</a>
+      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Confirm in-app</span>
+      <a href="https://www.winrummy10.com/?code=8JT9D83WCC3&t=1785293043" class="pick-dl" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-circle-down"></i> Get Win Rummy</a>
     </div>
     <div class="pick-card">
       <span class="pick-badge new"><i class="fa-solid fa-star"></i> New</span>
@@ -438,19 +438,14 @@
 <section class="coming-soon-section" aria-labelledby="coming-soon-title">
   <div class="coming-soon-card">
     <div class="cs-badges">
-      <span class="cs-tag soon"><i class="fa-solid fa-hourglass-half"></i> Coming Soon</span>
-      <span class="cs-tag sched">Scheduled</span>
+      <span class="cs-tag soon"><i class="fa-solid fa-bolt"></i> Just Launched</span>
+      <span class="cs-tag sched">New on All Yono Official</span>
     </div>
     <img class="coming-soon-icon" src="app_icon/Win-Rummy.webp" alt="Win Rummy app icon" width="64" height="64" loading="lazy" decoding="async">
-    <h3 id="coming-soon-title">Win Rummy is joining All Yono Official</h3>
-    <p>Expected to launch around 8:00 AM IST on 29 July 2026. We'll add bonus, promo code and safety information once the app is live and can be independently reviewed.</p>
-    <div class="cs-countdown" id="winrummy-countdown">
-      <div><b id="wr-d">--</b><span>Days</span></div>
-      <div><b id="wr-h">--</b><span>Hrs</span></div>
-      <div><b id="wr-m">--</b><span>Min</span></div>
-      <div><b id="wr-s">--</b><span>Sec</span></div>
-    </div>
-    <a href="/telegram-link.html" target="_blank" rel="noopener noreferrer" class="cs-tg-btn"><i class="fa-brands fa-telegram"></i> Join Telegram for launch updates</a>
+    <h3 id="coming-soon-title">Win Rummy Is Now Live on All Yono Official</h3>
+    <p>Win Rummy has launched. Get the app below — its own download page currently shows the Android file as still being prepared, so confirm the bonus and installation status in-app before depositing.</p>
+    <a href="https://www.winrummy10.com/?code=8JT9D83WCC3&t=1785293043" target="_blank" rel="noopener noreferrer" class="cs-tg-btn"><i class="fa-solid fa-circle-down"></i> Get Win Rummy</a>
+    <a href="/blog/win-rummy-official-website-apk-support/" class="cs-details-link">Read the Win Rummy verification guide</a>
   </div>
 </section>
 
@@ -633,36 +628,6 @@
     document.getElementById('hero-highlight').textContent = games.length + '+ Verified Apps Updated Daily';
     document.getElementById('stat-apps').textContent = games.length + '+';
   });
-
-  // Live countdown to the Win Rummy launch window (8:00 AM IST, 29 Jul 2026)
-  (function () {
-    const target = new Date('2026-07-29T08:00:00+05:30').getTime();
-    const wrap = document.getElementById('winrummy-countdown');
-    if (!wrap) return;
-    const dEl = document.getElementById('wr-d');
-    const hEl = document.getElementById('wr-h');
-    const mEl = document.getElementById('wr-m');
-    const sEl = document.getElementById('wr-s');
-    let timer;
-    function tick() {
-      const diff = target - Date.now();
-      if (diff <= 0) {
-        wrap.innerHTML = '<p class="cs-live-msg"><i class="fa-solid fa-circle-check"></i> Win Rummy has launched — check back for its listing!</p>';
-        if (timer) clearInterval(timer);
-        return;
-      }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      dEl.textContent = d;
-      hEl.textContent = String(h).padStart(2, '0');
-      mEl.textContent = String(m).padStart(2, '0');
-      sEl.textContent = String(s).padStart(2, '0');
-    }
-    tick();
-    timer = setInterval(tick, 1000);
-  })();
 </script>
 
 <section class="trust-strip">

@@ -6,6 +6,7 @@
 // ──────────────────────────────────────────────────────────────────
 const promoCodes = {
   morning: [
+    { name: 'Win Rummy', code: '8JT9D83WCC3' },
     { name: 'Spin 777', code: 'SPIN777_WeeklyBonus_HurryUp' },
     { name: 'Neta vip', code: 'Neta.Vip593849' },
     { name: '101 Z', code: '101z-FreeSpins0708' },
