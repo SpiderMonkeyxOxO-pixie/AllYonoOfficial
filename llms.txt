@@ -1,0 +1,25 @@
+# All Yono Official
+
+> All Yono Official is an independent informational platform covering Yono-style real-money gaming apps available in India — rummy, slots, spin, and bingo titles. It publishes app details, sign-up bonus and minimum withdrawal figures, safety notes, and official download links, along with longer guides on APK safety, referral codes, login access, and withdrawals.
+
+All Yono Official does not own, operate, or control any of the third-party apps it lists, and does not process registrations, deposits, or withdrawals on behalf of any app. Content is intended for adults (18+) in jurisdictions where skill-based real-money gaming apps are permitted. Full terms are in the Disclaimer.
+
+## Key pages
+
+- [Most Rated Apps](https://allyonoofficial.com/most-rated-apps/): Full list of every app covered, with current bonus and category.
+- [Rummy Apps](https://allyonoofficial.com/rummy-apps/): Rummy-category app listing.
+- [Slot Games](https://allyonoofficial.com/slot-games/): Slot-category app listing.
+- [Spin Games](https://allyonoofficial.com/spin-games/): Spin-wheel category app listing.
+- [Bingo Apps](https://allyonoofficial.com/bingo-apps/): Bingo-category app listing.
+- [App Checker](https://allyonoofficial.com/app-checker/): Look up whether a specific app is currently listed and see its bonus/withdrawal details.
+- [Blog & Guides](https://allyonoofficial.com/blog/): Per-app guides covering APK download safety, referral codes, login access, and withdrawals, plus general safety and scam-awareness articles.
+
+## Individual app pages
+
+Each app has its own page at `/{app-slug}/` (e.g. `/rummy77/`, `/jeetexch/`) with its current sign-up bonus, minimum withdrawal, official download link, and `SoftwareApplication` structured data. The full set is linked from [Most Rated Apps](https://allyonoofficial.com/most-rated-apps/) and [sitemap.xml](https://allyonoofficial.com/sitemap.xml).
+
+## About
+
+- [About Us](https://allyonoofficial.com/about-us.html): Who runs the site and what it does.
+- [Disclaimer](https://allyonoofficial.com/disclaimer.html): Independence from listed apps, liability, and legal terms.
+- [Contact Us](https://allyonoofficial.com/contact-us.html): Corrections, removal requests, and questions.
