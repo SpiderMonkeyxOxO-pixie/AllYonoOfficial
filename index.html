@@ -37,14 +37,32 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["Organization", "WebSite"],
-    "name": "All Yono Official",
-    "url": "https://allyonoofficial.com/",
-    "logo": "https://allyonoofficial.com/img/img_20240727_173841_366.png",
-    "sameAs": ["https://allyonoofficial.com/telegram-link.html"]
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://allyonoofficial.com/#organization",
+      "name": "All Yono Official",
+      "url": "https://allyonoofficial.com/",
+      "logo": "https://allyonoofficial.com/img/img_20240727_173841_366.png",
+      "description": "All Yono Official is an independent directory of Yono-network Android game apps. It is not the official website of any listed app and is not affiliated with SBI or YONO by SBI.",
+      "sameAs": [
+        "https://allyonoofficial.com/telegram-link.html"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://allyonoofficial.com/#website",
+      "name": "All Yono Official",
+      "url": "https://allyonoofficial.com/",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://allyonoofficial.com/#organization"
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="preload" href="img/hero-bg.webp" as="image" fetchpriority="high">
@@ -400,61 +418,53 @@
       <span class="pick-badge coming"><i class="fa-solid fa-bolt"></i> Just Launched</span>
       <img class="pick-icon" src="app_icon/Money-Rummy.jpg" alt="Money Rummy app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Money Rummy</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus TBA</span>
       <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Confirm in-app</span>
-      <a href="https://moneyrummyff.com/?code=T1XR7S7YJ9T&t=1788922546" class="pick-dl" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-circle-down"></i> Get Money Rummy</a>
+      <a href="https://moneyrummyff.com/?code=T1XR7S7YJ9T&t=1788922546" class="pick-dl" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="fa-solid fa-circle-down"></i> Get Money Rummy</a>
     </div>
     <div class="pick-card coming-pick">
       <span class="pick-badge coming"><i class="fa-solid fa-bolt"></i> Just Launched</span>
       <img class="pick-icon" src="app_icon/Win-Rummy.webp" alt="Win Rummy app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Win Rummy</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹100</span>
       <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Confirm in-app</span>
-      <a href="https://www.winrummy10.com/?code=8JT9D83WCC3&t=1785293043" class="pick-dl" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-circle-down"></i> Get Win Rummy</a>
+      <a href="https://www.winrummy10.com/?code=8JT9D83WCC3&t=1785293043" class="pick-dl" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="fa-solid fa-circle-down"></i> Get Win Rummy</a>
     </div>
     <div class="pick-card">
       <span class="pick-badge paying"><i class="fa-solid fa-file-lines"></i> Fully Documented</span>
       <img class="pick-icon" src="app_icon/Yono-777.webp" alt="Yono 777 app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Yono 777</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
-      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/yono-777/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card">
       <span class="pick-badge new"><i class="fa-solid fa-star"></i> New</span>
       <img class="pick-icon" src="app_icon/Dhan-Game.webp" alt="DhanGame app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">DhanGame</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹100-500</span>
-      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/dhangame/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card top-pick">
-      <span class="pick-badge"><i class="fa-solid fa-shield-check"></i> Verified Coverage</span>
+      <span class="pick-badge"><i class="fa-solid fa-shield-check"></i> Full Coverage</span>
       <img class="pick-icon" src="app_icon/Max-Rummy-1024x1024.webp" alt="Max Rummy app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Max Rummy</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
-      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/max-rummy/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card">
       <img class="pick-icon" src="app_icon/Yono-Slots.webp" alt="Yono Rummy app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Yono Rummy</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹165</span>
-      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/yono-rummy/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card">
       <img class="pick-icon" src="app_icon/Yono-Games.webp" alt="Yono Games app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Yono Games</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
-      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/yono-games/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
     <div class="pick-card">
       <img class="pick-icon" src="app_icon/Yono-Arcade.webp" alt="Yono Arcade app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Yono Arcade</p>
-      <span class="pick-bonus"><i class="fa-solid fa-gift"></i> Bonus ₹150</span>
-      <span class="pick-min"><i class="fa-solid fa-building-columns"></i> Min ₹100</span>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/yono-arcade/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
   </div>
@@ -469,7 +479,7 @@
     <img class="coming-soon-icon" src="app_icon/Money-Rummy.jpg" alt="Money Rummy app icon" width="64" height="64" loading="lazy" decoding="async">
     <h3 id="coming-soon-title">Money Rummy Is Now Live on All Yono Official</h3>
     <p>Money Rummy has launched. Get the app below — no welcome bonus or promo code has been confirmed yet, so verify current offers in-app before depositing.</p>
-    <a href="https://moneyrummyff.com/?code=T1XR7S7YJ9T&t=1788922546" target="_blank" rel="noopener noreferrer" class="cs-tg-btn"><i class="fa-solid fa-circle-down"></i> Get Money Rummy</a>
+    <a href="https://moneyrummyff.com/?code=T1XR7S7YJ9T&t=1788922546" target="_blank" rel="sponsored nofollow noopener noreferrer" class="cs-tg-btn"><i class="fa-solid fa-circle-down"></i> Get Money Rummy</a>
     <a href="/money-rummy/" class="cs-details-link">See the Money Rummy page</a>
   </div>
 </section>
@@ -614,10 +624,9 @@
         <img src="app_icon/${g.i}" alt="${g.n} app icon" class="app-icon-sm" width="60" height="60" loading="lazy" decoding="async" fetchpriority="low" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 24 24\' fill=\'%23333\'%3E%3Crect width=\'60\' height=\'60\' fill=\'%23ddd\'/%3E%3Ctext x=\'30\' y=\'40\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23666\'%3E🎮%3C/text%3E%3C/svg%3E'">
         <div class="app-details">
           <p class="app-name">${g.n}</p>
-          <span class="bonus-txt"><i class="fa-solid fa-gift"></i> Sign Up Bonus ₹${g.b}</span>
-          <span class="withdraw-txt"><i class="fa-solid fa-building-columns"></i> Min. Withdraw ₹100</span>
+          <span class="withdraw-txt"><i class="fa-solid fa-circle-info"></i> Listing, download page &amp; safety notes</span>
         </div>
-        <a href="/${g.l}/" class="dl-mini">Download</a>
+        <a href="/${g.l}/" class="dl-mini">View</a>
       </li>
     `;
     // Render in small batches across animation frames so building a long
@@ -656,25 +665,25 @@
   // Fill in honest, data-driven trust copy (no fabricated numbers)
   // Deferred to DOMContentLoaded since #stat-apps sits later in the document than this script tag.
   document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('hero-highlight').textContent = games.length + '+ Verified Apps';
+    document.getElementById('hero-highlight').textContent = games.length + '+ Listed Apps';
     document.getElementById('stat-apps').textContent = games.length + '+';
   });
 </script>
 
 <section class="trust-strip">
-  <div class="trust-item"><b id="stat-apps">60+</b><span>Verified Apps</span></div>
-  <div class="trust-item"><b>₹100</b><span>Min Withdrawal</span></div>
-  <div class="trust-item"><b>24/7</b><span>Telegram Support</span></div>
+  <div class="trust-item"><b id="stat-apps">60+</b><span>Listed Apps</span></div>
+  <div class="trust-item"><b>18+</b><span>Adults Only</span></div>
+  <div class="trust-item"><b>Independent</b><span>Not Any App's Official Site</span></div>
 </section>
 
 <section class="section-wrap why-section">
   <h2 class="section-title">What Every Listing Includes</h2>
-  <p>Every app on this site links to an official access source, states its bonus and minimum withdrawal on its own listing page, and links to our shared safety guidance — the baseline we check before comparing anything further. See <a href="/methodology/">how we compare</a> for what goes beyond this baseline.</p>
+  <p>All Yono Official is an independent directory. It is not the official website of any app listed here, and it is not connected to SBI or its YONO banking app. Each listing shows the download page the app currently uses, and links to our shared safety guidance. See <a href="/methodology/">how we check listings</a>.</p>
   <ul class="why-list">
-    <li><i class="fa-solid fa-circle-check"></i> Verified official download links for every listed app</li>
-    <li><i class="fa-solid fa-gift"></i> Sign-up bonuses disclosed on each listing, from ₹51 to ₹500</li>
-    <li><i class="fa-solid fa-bolt"></i> Fast withdrawals starting from just ₹100</li>
-    <li><i class="fa-brands fa-telegram"></i> Active Telegram community for promo codes &amp; updates</li>
+    <li><i class="fa-solid fa-circle-check"></i> The download page each app currently uses (some are referral links)</li>
+    <li><i class="fa-solid fa-shield-halved"></i> Safety guides on links, APK permissions and scam red flags</li>
+    <li><i class="fa-solid fa-circle-info"></i> Clear notes on what we have and have not checked</li>
+    <li><i class="fa-brands fa-telegram"></i> A Telegram channel for listing updates</li>
   </ul>
 </section>
 
@@ -684,12 +693,12 @@
     <div class="step-card">
       <div class="step-num">1</div>
       <h3>Choose an App</h3>
-      <p>Pick any app from our verified list above.</p>
+      <p>Pick an app from the list above and read its page.</p>
     </div>
     <div class="step-card">
       <div class="step-num">2</div>
       <h3>Download APK</h3>
-      <p>Tap Download to get the official APK link.</p>
+      <p>The Download button opens the app's current download page. Some are referral links.</p>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
@@ -698,8 +707,8 @@
     </div>
     <div class="step-card">
       <div class="step-num">4</div>
-      <h3>Claim Bonus &amp; Withdraw</h3>
-      <p>Claim your sign-up bonus and withdraw from ₹100.</p>
+      <h3>Check Before You Play</h3>
+      <p>Read the app's own terms. Online money games are prohibited in India under the Promotion and Regulation of Online Gaming Act, 2025.</p>
     </div>
   </div>
 </section>
@@ -709,8 +718,8 @@
   <div class="feature-grid">
     <div class="feature-card">
       <i class="fa-solid fa-shield-halved"></i>
-      <h3>Verified Links</h3>
-      <p>Every download button points to the app's official page.</p>
+      <h3>Current Links</h3>
+      <p>Download buttons point to the page each app currently uses. We are not the official site of any app.</p>
     </div>
     <div class="feature-card">
       <i class="fa-solid fa-clock-rotate-left"></i>
@@ -718,16 +727,16 @@
       <p>Each listing states the bonus shown by the app itself — confirm the current amount in-app before relying on it.</p>
     </div>
     <div class="feature-card">
-      <i class="fa-solid fa-money-bill-transfer"></i>
-      <h3>Fast Withdrawal</h3>
-      <p>Minimum withdrawal of just ₹100 on most apps.</p>
+      <i class="fa-solid fa-user-shield"></i>
+      <h3>Safety Guides</h3>
+      <p>How to check a link, read APK permissions and spot fake support or payment requests.</p>
     </div>
   </div>
 </section>
 
 <section class="cta-banner">
-  <h2>Ready to Start Winning?</h2>
-  <p>Explore our full list of verified apps and claim your sign-up bonus today.</p>
+  <h2>Check Before You Install</h2>
+  <p>Browse the app list, then read our safety guides before installing anything. 18+ only.</p>
   <div class="cta-buttons">
     <a href="#apps" class="btn-primary">Explore Apps</a>
     <a href="/telegram-link.html" target="_blank" class="btn-outline">Join Telegram</a>
@@ -739,26 +748,26 @@
 
   <div class="faq-item">
     <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-      How do I claim a sign-up bonus?
+      Is All Yono Official the official site of these apps?
       <i class="fa-solid fa-chevron-down"></i>
     </div>
-    <div class="faq-a">Download any app from our list, sign up with your mobile number, and most apps credit a welcome bonus directly to your in-app account.</div>
+    <div class="faq-a">No. All Yono Official is an independent directory. It does not own or run any listed app, and it is not the official website of any of them. Some download links on this site are referral links, and we may earn a commission when they are used.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-      Is rummy legal in my state?
+      Is online rummy for money legal in India?
       <i class="fa-solid fa-chevron-down"></i>
     </div>
-    <div class="faq-a">Rummy is a game of skill and legal in most of India, but it is currently banned in Andhra Pradesh, Sikkim, Nagaland, Assam, Tamil Nadu, Odisha and Telangana. Please check your local laws before playing. See our <a href="/disclaimer.html">Disclaimer page</a> for details.</div>
+    <div class="faq-a">No. Online money games are prohibited in India under the Promotion and Regulation of Online Gaming Act, 2025, in force since 1 May 2026. It covers games based on skill, chance, or both, so older state-by-state lists no longer give the full picture. See our <a href="/disclaimer.html">Disclaimer page</a> and <a href="/responsible-gaming/">Responsible Gaming</a>.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-      What is the minimum withdrawal amount?
+      Is this site connected to SBI YONO?
       <i class="fa-solid fa-chevron-down"></i>
     </div>
-    <div class="faq-a">Most apps listed here allow withdrawals starting from just ₹100, subject to the app's own KYC and verification process.</div>
+    <div class="faq-a">No. SBI's YONO is a banking app from the State Bank of India. The Yono-named games listed here are unrelated to SBI, and All Yono Official has no connection to SBI.</div>
   </div>
 
   <div class="faq-item">
@@ -766,15 +775,15 @@
       Is it safe to download these apps?
       <i class="fa-solid fa-chevron-down"></i>
     </div>
-    <div class="faq-a">We link only to the official APK page for each app via the Download button on its app page. Always verify the app's own KYC and security details directly with the provider.</div>
+    <div class="faq-a">We list the download page each app currently uses, but we do not operate or audit these apps. Check the file and the permissions it asks for, never share an OTP or UPI PIN, and read our <a href="/blog/all-yono-official-apk-information/">APK safety notes</a>.</div>
   </div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-      How do I get the latest promo codes &amp; updates?
+      How do I get listing updates?
       <i class="fa-solid fa-chevron-down"></i>
     </div>
-    <div class="faq-a">Join our <a href="/telegram-link.html" target="_blank">Telegram channel</a> for daily promo codes, app updates, and bonus alerts. You can also check the floating Promo Codes button on this page.</div>
+    <div class="faq-a">Our <a href="/telegram-link.html" target="_blank">Telegram channel</a> posts listing changes and new app launches.</div>
   </div>
 </section>
 
@@ -822,9 +831,9 @@
 
 <div class="red-disclaimer-box">
   <span class="notice-title">Important Notice</span>
-  <p><b>AllYonoOfficial.Com</b> do not run or own the apps listed here. Only for <b>18+ people</b>.</p>
+  <p><b>AllYonoOfficial.com</b> is an independent directory. It does not run or own the apps listed here, is not the official site of any of them, and is not connected to SBI YONO. Only for <b>18+ people</b>.</p>
   <p>Please read our <b><a href="/disclaimer.html" style="text-decoration:underline; color:purple;">Disclaimer page</a></b>.</p>
-  <p><b>Alert:</b> Rummy is banned in AP, Sikkim, Nagaland, Assam, TN, Odisha, and Telangana.</p>
+  <p><b>Alert:</b> Online money games are prohibited in India under the Online Gaming Act, 2025. Some download links on this site are referral links.</p>
 </div>
 
 <div class="telegram-bar">
@@ -847,7 +856,7 @@
 <footer class="main-background">
   <div style="margin-bottom:20px;">
     <a href="/about-us.html" class="footer-link">About Us</a>
-    <a href="/disclaimer.html" class="footer-link">Disclaimer</a>
+    <a href="/disclaimer.html" class="footer-link">Disclaimer</a><a href="/methodology/" class="footer-link">Methodology</a><a href="/editorial-policy/" class="footer-link">Editorial Policy</a><a href="/responsible-gaming/" class="footer-link">Responsible Gaming (18+)</a>
     <a href="/contact-us.html" class="footer-link">Contact Us</a>
     <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
     <a href="/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
