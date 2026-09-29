@@ -18,6 +18,10 @@ All Yono Official does not own, operate, or control any listed app, and does not
 
 Each app has a page at `/{app-slug}/` (e.g. `/rummy77/`) with its current download page, login notes, safety notes and `SoftwareApplication` structured data. The full set is in [sitemap.xml](https://allyonoofficial.com/sitemap.xml).
 
+## New Guides
+
+- [Yono Games vs SBI YONO: Which "Yono" App Is Which?](https://allyonoofficial.com/blog/yono-games-vs-sbi-yono/)
+
 ## Legal and Safety
 
 - [Is Rummy Legal in India? 2026 Law & Responsible Gaming Guide](https://allyonoofficial.com/blog/all-yono-official-legal-responsible-gaming/): what the Online Gaming Act, 2025 covers, with official sources.
