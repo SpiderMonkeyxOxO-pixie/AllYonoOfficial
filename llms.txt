@@ -20,6 +20,7 @@ Each app has a page at `/{app-slug}/` (e.g. `/rummy77/`) with its current downlo
 
 ## New Guides
 
+- [Yono Games Not Working or Not Opening? Causes and What to Check](https://allyonoofficial.com/blog/yono-games-not-working/)
 - [Yono Games vs SBI YONO: Which "Yono" App Is Which?](https://allyonoofficial.com/blog/yono-games-vs-sbi-yono/)
 
 ## Legal and Safety
