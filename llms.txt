@@ -20,6 +20,7 @@ Each app has a page at `/{app-slug}/` (e.g. `/rummy77/`) with its current downlo
 
 ## New Guides
 
+- [Yono Clone Apps: How to Tell a Real Download Page From a Copy](https://allyonoofficial.com/blog/yono-clone-apps-real-vs-copy/)
 - [Is Yono Arcade Safe? What to Check Before Installing](https://allyonoofficial.com/blog/is-yono-arcade-safe/)
 - [Yono Arcade Official, Pure and Plus APK: Which App Is Which?](https://allyonoofficial.com/blog/yono-arcade-which-app-is-it/)
 - [Yono Games Not Working or Not Opening? Causes and What to Check](https://allyonoofficial.com/blog/yono-games-not-working/)
