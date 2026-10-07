@@ -396,6 +396,52 @@
   </div>
 </div>
 
+<section class="coming-soon-section" id="coming-soon-jaiho-play" aria-labelledby="coming-soon-jaiho-play-title">
+  <div class="coming-soon-card">
+    <div class="cs-badges">
+      <span class="cs-tag soon"><i class="fa-solid fa-clock"></i> Coming Soon</span>
+      <span class="cs-tag sched">Launches 15 Oct 2026, 12:00 PM IST</span>
+    </div>
+    <img class="coming-soon-icon" src="app_icon/Jaiho-Play.webp" alt="Jaiho Play app icon" width="64" height="64" decoding="async">
+    <h3 id="coming-soon-jaiho-play-title">Jaiho Play - Coming 15 October 2026</h3>
+    <div class="cs-countdown" id="jaiho-play-countdown" role="timer" aria-label="Time remaining until Jaiho Play launch">
+      <div><b data-cs="days">--</b><span>Days</span></div>
+      <div><b data-cs="hours">--</b><span>Hrs</span></div>
+      <div><b data-cs="minutes">--</b><span>Min</span></div>
+      <div><b data-cs="seconds">--</b><span>Sec</span></div>
+    </div>
+    <p class="cs-live-msg" id="jaiho-play-live" hidden>Jaiho Play's announced launch time has arrived. Check back for confirmed details.</p>
+    <p>Jaiho Play is an upcoming game app. No download link, welcome bonus or promo code has been announced yet. Details will be added once the app goes live. Join Telegram for the launch notification.</p>
+    <a href="/telegram-link.html" target="_blank" class="cs-tg-btn"><i class="fa-brands fa-telegram"></i> Get Notified on Telegram</a>
+  </div>
+  <script>
+    (function () {
+      var target = new Date('2026-10-15T12:00:00+05:30').getTime();
+      var root = document.getElementById('jaiho-play-countdown');
+      var live = document.getElementById('jaiho-play-live');
+      if (!root) return;
+      var cells = {};
+      ['days', 'hours', 'minutes', 'seconds'].forEach(function (k) { cells[k] = root.querySelector('[data-cs="' + k + '"]'); });
+      function pad(n) { return n < 10 ? '0' + n : String(n); }
+      function tick() {
+        var diff = target - Date.now();
+        if (diff <= 0) {
+          root.hidden = true;
+          if (live) live.hidden = false;
+          return false;
+        }
+        var s = Math.floor(diff / 1000);
+        cells.days.textContent = pad(Math.floor(s / 86400));
+        cells.hours.textContent = pad(Math.floor((s % 86400) / 3600));
+        cells.minutes.textContent = pad(Math.floor((s % 3600) / 60));
+        cells.seconds.textContent = pad(s % 60);
+        return true;
+      }
+      if (tick()) { var id = setInterval(function () { if (!tick()) clearInterval(id); }, 1000); }
+    })();
+  </script>
+</section>
+
 <section class="section-wrap why-section" aria-labelledby="how-we-compare-title">
   <h2 class="section-title" id="how-we-compare-title">How We Compare Apps</h2>
   <p>We check four things before an app appears in a comparison: whether an official access link is published, whether we've written a full documentation guide for it, whether it has extra independent verification coverage, and whether its bonus/withdrawal terms are disclosed on its listing. We don't use star ratings — a uniform rating figure used to appear across most listings here and it did not reflect real review data, so we removed it.</p>
@@ -416,10 +462,10 @@
   <div class="top-picks-row">
     <div class="pick-card coming-pick">
       <span class="pick-badge coming"><i class="fa-solid fa-clock"></i> Coming Soon</span>
-      <img class="pick-icon" src="app_icon/Jeet-Spin.webp" alt="Jeet Spin app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
-      <p class="pick-name">Jeet Spin</p>
-      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Launches 30 Sep 2026</span>
-      <a href="/jeet-spin/" class="pick-dl"><i class="fa-solid fa-circle-info"></i> View Details</a>
+      <img class="pick-icon" src="app_icon/Jaiho-Play.webp" alt="Jaiho Play app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
+      <p class="pick-name">Jaiho Play</p>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Launches 15 Oct 2026</span>
+      <a href="#coming-soon-jaiho-play" class="pick-dl"><i class="fa-solid fa-circle-info"></i> View Countdown</a>
     </div>
     <div class="pick-card coming-pick">
       <span class="pick-badge coming"><i class="fa-solid fa-bolt"></i> Just Launched</span>
@@ -467,20 +513,6 @@
       <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Independent listing</span>
       <a href="/yono-arcade/" class="pick-dl"><i class="fa-solid fa-circle-down"></i> Download</a>
     </div>
-  </div>
-</section>
-
-<section class="coming-soon-section" aria-labelledby="coming-soon-jeet-spin">
-  <div class="coming-soon-card">
-    <div class="cs-badges">
-      <span class="cs-tag soon"><i class="fa-solid fa-clock"></i> Coming Soon</span>
-      <span class="cs-tag sched">Launches 30 Sep 2026</span>
-    </div>
-    <img class="coming-soon-icon" src="app_icon/Jeet-Spin.webp" alt="Jeet Spin app icon" width="64" height="64" loading="lazy" decoding="async">
-    <h3 id="coming-soon-jeet-spin">Jeet Spin - Coming 30 September 2026</h3>
-    <p>Jeet Spin is a new spin and arcade game app launching tomorrow. Download link and bonus details will be added once the app goes live. Join Telegram for the launch notification.</p>
-    <a href="/telegram-link.html" target="_blank" class="cs-tg-btn"><i class="fa-brands fa-telegram"></i> Get Notified on Telegram</a>
-    <a href="/jeet-spin/" class="cs-details-link">See the Jeet Spin page</a>
   </div>
 </section>
 
