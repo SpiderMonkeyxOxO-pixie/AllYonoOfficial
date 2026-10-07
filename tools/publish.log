@@ -1,0 +1,136 @@
+[master d009352] Publish scheduled post: yono-games-not-working, yono-arcade-which-app-is-it
+ 5 files changed, 803 insertions(+), 47 deletions(-)
+ create mode 100644 blog/yono-arcade-which-app-is-it/index.html
+ create mode 100644 blog/yono-games-not-working/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/yono-games-not-working/
+Published blog/yono-arcade-which-app-is-it/
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
+[master 102e2ff] Publish scheduled post: is-yono-arcade-safe
+ 5 files changed, 425 insertions(+), 50 deletions(-)
+ create mode 100644 blog/is-yono-arcade-safe/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/is-yono-arcade-safe/
+Refreshed blog/yono-arcade-which-app-is-it/ (links to newly published posts restored)
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
+[master 9107b2a] Publish scheduled post: yono-clone-apps-real-vs-copy
+ 4 files changed, 433 insertions(+), 50 deletions(-)
+ create mode 100644 blog/yono-clone-apps-real-vs-copy/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/yono-clone-apps-real-vs-copy/
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
+[master 82b735c] Publish scheduled post: yono-rummy-which-app-is-it
+ 4 files changed, 429 insertions(+), 51 deletions(-)
+ create mode 100644 blog/yono-rummy-which-app-is-it/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/yono-rummy-which-app-is-it/
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
+[master 1265c7b] Publish scheduled post: yono-777-which-app-is-it
+ 4 files changed, 431 insertions(+), 52 deletions(-)
+ create mode 100644 blog/yono-777-which-app-is-it/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/yono-777-which-app-is-it/
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
+[master b001d08] Publish scheduled post: yono-vip-which-app-is-it
+ 4 files changed, 432 insertions(+), 53 deletions(-)
+ create mode 100644 blog/yono-vip-which-app-is-it/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/yono-vip-which-app-is-it/
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
+[master 77b9ad3] Publish scheduled post: jaiho-777-which-app-is-it
+ 4 files changed, 433 insertions(+), 54 deletions(-)
+ create mode 100644 blog/jaiho-777-which-app-is-it/index.html
+To github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'github-allyonoofficial:SpiderMonkeyxOxO-pixie/AllYonoOfficial.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Published blog/jaiho-777-which-app-is-it/
+Traceback (most recent call last):
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 162, in <module>
+    main()
+  File "/www/wwwroot/allyonoofficial.com/tools/publish-scheduled-posts.py", line 156, in main
+    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'HEAD:main']' returned non-zero exit status 1.
