@@ -153,7 +153,12 @@ def main():
     subprocess.run(["git", "add", "-A", "blog", "sitemap.xml", "llms.txt"], cwd=ROOT, check=True)
     subprocess.run(["git", "-c", "user.name=AllYonoOfficial server", "-c", "user.email=server@allyonoofficial.com",
                     "commit", "-m", "Publish scheduled post: " + ", ".join(published or refreshed)], cwd=ROOT, check=True)
-    subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+    # A failed push (for example expired GitHub credentials) must not stop the IndexNow
+    # submission below: the pages are already live on disk once they are committed.
+    try:
+        subprocess.run(["git", "push", "origin", "HEAD:main"], cwd=ROOT, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"WARNING: git push failed (exit {e.returncode}); the pages are live locally but not on GitHub.")
     if published:
         indexnow([f"{SITE}/blog/{s}/" for s in published] + [f"{SITE}/blog/"])
 
