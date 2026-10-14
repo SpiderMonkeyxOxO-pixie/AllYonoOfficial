@@ -20,6 +20,7 @@ Each app has a page at `/{app-slug}/` (e.g. `/rummy77/`) with its current downlo
 
 ## New Guides
 
+- [New Yono Games (October 2026): What's New and How to Check Each One](https://allyonoofficial.com/blog/new-yono-games-list/)
 - [Rumble Rummy: Which App Is It? (2026 Check)](https://allyonoofficial.com/blog/rumble-rummy-which-app-is-it/)
 - [Joy Rummy: Which App Is It? (2026 Check)](https://allyonoofficial.com/blog/joy-rummy-which-app-is-it/)
 - [Sono777, Y0n077, Yuno777: Are These the Same App as Yono 777?](https://allyonoofficial.com/blog/yono-777-name-variations/)
