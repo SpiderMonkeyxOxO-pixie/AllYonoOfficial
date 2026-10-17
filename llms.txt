@@ -20,6 +20,7 @@ Each app has a page at `/{app-slug}/` (e.g. `/rummy77/`) with its current downlo
 
 ## New Guides
 
+- [Jaiho Win: Which App Is It? (2026 Check)](https://allyonoofficial.com/blog/jaiho-win-which-app-is-it/)
 - [What Does 777 Mean in Yono Game Names?](https://allyonoofficial.com/blog/what-777-means-in-yono-game-names/)
 - [789 Jackpot: Which App Is It? (2026 Check)](https://allyonoofficial.com/blog/789-jackpot-which-app-is-it/)
 - [New Yono Games (October 2026): What's New and How to Check Each One](https://allyonoofficial.com/blog/new-yono-games-list/)
