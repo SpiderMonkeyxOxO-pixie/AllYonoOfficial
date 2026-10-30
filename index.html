@@ -399,47 +399,14 @@
 <section class="coming-soon-section" id="coming-soon-spin-rummy" aria-labelledby="coming-soon-spin-rummy-title">
   <div class="coming-soon-card">
     <div class="cs-badges">
-      <span class="cs-tag soon"><i class="fa-solid fa-clock"></i> Coming Soon</span>
-      <span class="cs-tag sched">Launches 30 Oct 2026, 8:00 AM IST</span>
+      <span class="cs-tag sched"><i class="fa-solid fa-bolt"></i> Just Launched</span>
+      <span class="cs-tag sched">Launched 30 Oct 2026, 8:00 AM IST</span>
     </div>
     <img class="coming-soon-icon" src="app_icon/Spin-Rummy.webp" alt="Spin Rummy app icon" width="64" height="64" decoding="async">
-    <h3 id="coming-soon-spin-rummy-title">Spin Rummy - Coming 30 October 2026</h3>
-    <div class="cs-countdown" id="spin-rummy-countdown" role="timer" aria-label="Time remaining until Spin Rummy launch">
-      <div><b data-cs="days">--</b><span>Days</span></div>
-      <div><b data-cs="hours">--</b><span>Hrs</span></div>
-      <div><b data-cs="minutes">--</b><span>Min</span></div>
-      <div><b data-cs="seconds">--</b><span>Sec</span></div>
-    </div>
-    <p class="cs-live-msg" id="spin-rummy-live" hidden>Spin Rummy's announced launch time has arrived. Check back for confirmed details.</p>
-    <p>Spin Rummy is an upcoming game app. No download link, welcome bonus or promo code has been announced yet. Details will be added once the app goes live. Join Telegram for the launch notification.</p>
-    <a href="/telegram-link.html" target="_blank" class="cs-tg-btn"><i class="fa-brands fa-telegram"></i> Get Notified on Telegram</a>
+    <h3 id="coming-soon-spin-rummy-title">Spin Rummy has launched</h3>
+    <p>Spin Rummy launched on 30 October 2026, pairing a spin-wheel icon with the rummy format in the same green-diamond branding used elsewhere in this network. No welcome bonus or promo code has been confirmed yet, so download via our sponsored referral link below — see our <a href="/blog/spin-rummy-launch-announcement/">launch coverage</a> for what's confirmed so far.</p>
+    <a href="https://spinrummy.cx/?code=31X42Q6DH9P&t=1793332810" target="_blank" rel="sponsored nofollow noopener noreferrer" class="cs-tg-btn"><i class="fa-solid fa-circle-down"></i> Download Spin Rummy</a>
   </div>
-  <script>
-    (function () {
-      var target = new Date('2026-10-30T08:00:00+05:30').getTime();
-      var root = document.getElementById('spin-rummy-countdown');
-      var live = document.getElementById('spin-rummy-live');
-      if (!root) return;
-      var cells = {};
-      ['days', 'hours', 'minutes', 'seconds'].forEach(function (k) { cells[k] = root.querySelector('[data-cs="' + k + '"]'); });
-      function pad(n) { return n < 10 ? '0' + n : String(n); }
-      function tick() {
-        var diff = target - Date.now();
-        if (diff <= 0) {
-          root.hidden = true;
-          if (live) live.hidden = false;
-          return false;
-        }
-        var s = Math.floor(diff / 1000);
-        cells.days.textContent = pad(Math.floor(s / 86400));
-        cells.hours.textContent = pad(Math.floor((s % 86400) / 3600));
-        cells.minutes.textContent = pad(Math.floor((s % 3600) / 60));
-        cells.seconds.textContent = pad(s % 60);
-        return true;
-      }
-      if (tick()) { var id = setInterval(function () { if (!tick()) clearInterval(id); }, 1000); }
-    })();
-  </script>
 </section>
 
 <section class="coming-soon-section" id="coming-soon-vip-rummy" aria-labelledby="coming-soon-vip-rummy-title">
@@ -487,11 +454,11 @@
   <p class="top-picks-intro">A few Yono apps we've documented most recently, shown with what we actually know about them — see the full comparison for the rest.</p>
   <div class="top-picks-row">
     <div class="pick-card coming-pick">
-      <span class="pick-badge coming"><i class="fa-solid fa-clock"></i> Coming Soon</span>
+      <span class="pick-badge coming"><i class="fa-solid fa-bolt"></i> Just Launched</span>
       <img class="pick-icon" src="app_icon/Spin-Rummy.webp" alt="Spin Rummy app icon" width="56" height="56" loading="lazy" decoding="async" fetchpriority="low">
       <p class="pick-name">Spin Rummy</p>
-      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Launches 30 Oct 2026</span>
-      <a href="#coming-soon-spin-rummy" class="pick-dl"><i class="fa-solid fa-circle-info"></i> View Countdown</a>
+      <span class="pick-min"><i class="fa-solid fa-circle-info"></i> Confirm in-app</span>
+      <a href="https://spinrummy.cx/?code=31X42Q6DH9P&t=1793332810" class="pick-dl" target="_blank" rel="sponsored nofollow noopener noreferrer"><i class="fa-solid fa-circle-down"></i> Get Spin Rummy</a>
     </div>
     <div class="pick-card coming-pick">
       <span class="pick-badge coming"><i class="fa-solid fa-bolt"></i> Just Launched</span>
