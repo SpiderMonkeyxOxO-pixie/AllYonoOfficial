@@ -404,6 +404,63 @@
      launch order, newest at top. When a new platform launches, add its
      <section class="coming-soon-section"> block here, above this one
      (owner's standing rule, 2026-11-05). -->
+<section class="coming-soon-section" id="coming-soon-123-rummy" aria-labelledby="coming-soon-123-rummy-title">
+  <div class="coming-soon-card">
+    <div class="cs-badges">
+      <span class="cs-tag sched"><i class="fa-solid fa-hourglass-half"></i> Launching Soon</span>
+      <span class="cs-tag sched">Launches 16 Nov 2026, 8:00 AM IST</span>
+    </div>
+    <img class="coming-soon-icon" src="app_icon/123-Rummy.webp" alt="123Rummy app icon" width="64" height="64" decoding="async">
+    <h3 id="coming-soon-123-rummy-title">123Rummy is launching soon</h3>
+    <div data-countdown="2026-11-16T08:00:00+05:30" style="display:flex;gap:8px;justify-content:center;margin:2px 0 6px">
+      <div style="background:#f8fafc;border:1px solid #ede9fe;border-radius:10px;padding:6px 9px;min-width:50px;text-align:center">
+        <div data-unit="days" style="font-size:1.15rem;font-weight:800;color:#1a1a2e">00</div>
+        <div style="font-size:.6rem;letter-spacing:.03em;text-transform:uppercase;color:#64748b">Days</div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #ede9fe;border-radius:10px;padding:6px 9px;min-width:50px;text-align:center">
+        <div data-unit="hours" style="font-size:1.15rem;font-weight:800;color:#1a1a2e">00</div>
+        <div style="font-size:.6rem;letter-spacing:.03em;text-transform:uppercase;color:#64748b">Hrs</div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #ede9fe;border-radius:10px;padding:6px 9px;min-width:50px;text-align:center">
+        <div data-unit="minutes" style="font-size:1.15rem;font-weight:800;color:#7c3aed">00</div>
+        <div style="font-size:.6rem;letter-spacing:.03em;text-transform:uppercase;color:#64748b">Min</div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #ede9fe;border-radius:10px;padding:6px 9px;min-width:50px;text-align:center">
+        <div data-unit="seconds" style="font-size:1.15rem;font-weight:800;color:#7c3aed">00</div>
+        <div style="font-size:.6rem;letter-spacing:.03em;text-transform:uppercase;color:#64748b">Sec</div>
+      </div>
+    </div>
+    <p>123Rummy is scheduled to join the Yono network on 16 November 2026 at 8:00 AM IST. No download link, welcome bonus, or promo code has been confirmed yet — check back once it goes live.</p>
+  </div>
+</section>
+<script>
+(function () {
+  var countdowns = document.querySelectorAll("[data-countdown]");
+  if (!countdowns.length) return;
+  var pad2 = function (n) { return n < 10 ? "0" + n : String(n); };
+  var tick = function () {
+    countdowns.forEach(function (el) {
+      var target = new Date(el.getAttribute("data-countdown")).getTime();
+      var diff = Math.max(0, target - Date.now());
+      var days = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var minutes = Math.floor((diff % 3600000) / 60000);
+      var seconds = Math.floor((diff % 60000) / 1000);
+      var setUnit = function (unit, value) {
+        var node = el.querySelector('[data-unit="' + unit + '"]');
+        if (node) node.textContent = pad2(value);
+      };
+      setUnit("days", days);
+      setUnit("hours", hours);
+      setUnit("minutes", minutes);
+      setUnit("seconds", seconds);
+    });
+  };
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
 <section class="coming-soon-section" id="coming-soon-cash-rummy" aria-labelledby="coming-soon-cash-rummy-title">
   <div class="coming-soon-card">
     <div class="cs-badges">
